@@ -1,0 +1,3328 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pravieen MK — System Administrator & Infrastructure Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of pravieen MK, Associate System Administrator at Mindteck India Ltd. Specialized in Microsoft 365, Active Directory, network configuration, and enterprise IT operations.">
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ── CORE DESIGN SYSTEM ── */
+    :root {
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      /* Dark Theme (Default) */
+      --bg-main: #070a13;
+      --bg-card: #101424;
+      --bg-sidebar: #171d33;
+      --border: #1e2646;
+      --border-focus: #3b82f6;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --text-inverse: #0f172a;
+      
+      --primary: #3b82f6;
+      --primary-hover: #60a5fa;
+      --primary-light: rgba(59, 130, 246, 0.15);
+      --success: #10b981;
+      --success-light: rgba(16, 185, 129, 0.15);
+      --warning: #f59e0b;
+      --danger: #ef4444;
+
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.5);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
+      --radius: 12px;
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    [data-theme="light"] {
+      /* Light Theme Mode */
+      --bg-main: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-sidebar: #f1f5f9;
+      --border: #e2e8f0;
+      --border-focus: #2563eb;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --text-inverse: #ffffff;
+      
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --primary-light: rgba(37, 99, 235, 0.08);
+      --success: #059669;
+      --success-light: rgba(5, 150, 105, 0.08);
+      --warning: #d97706;
+      --danger: #dc2626;
+
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    a:hover {
+      color: var(--primary-hover);
+    }
+
+    /* Utility Layout Components */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-padding {
+      padding: 80px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── HEADER NAV ── */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(var(--bg-main) == #070a13 ? 7 : 248, var(--bg-main) == #070a13 ? 10 : 250, var(--bg-main) == #070a13 ? 19 : 252, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      height: 70px;
+      display: flex;
+      align-items: center;
+      transition: var(--transition);
+    }
+
+    header.scrolled {
+      box-shadow: var(--shadow);
+    }
+
+    .nav-inner {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--primary), #10b981);
+      color: white;
+      font-family: var(--font-mono);
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+
+    .nav-title-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+    }
+
+    .nav-status {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: var(--success);
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+
+    .nav-status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--success);
+      box-shadow: 0 0 8px var(--success);
+      animation: pulse 2s infinite;
+    }
+
+    .nav-center-info {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .sys-time {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      background: var(--primary-light);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 6px;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .theme-toggle-btn,
+    .ats-toggle-btn {
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .theme-toggle-btn:hover,
+    .ats-toggle-btn:hover {
+      border-color: var(--border-focus);
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .ats-toggle-btn {
+      width: auto;
+      padding: 0 12px;
+      font-size: 12px;
+      font-weight: 600;
+      gap: 6px;
+    }
+
+    .nav-cta {
+      background: var(--primary);
+      color: var(--text-inverse);
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+    }
+    .nav-cta:hover {
+      background: var(--primary-hover);
+      color: var(--text-inverse);
+      transform: translateY(-1px);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-main);
+      cursor: pointer;
+      font-size: 24px;
+    }
+
+    /* Mobile Nav Dropdown */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      padding: 20px;
+      z-index: 99;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 12px 0;
+      font-weight: 500;
+      color: var(--text-main);
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+
+    /* ── HERO / DASHBOARD SECTION ── */
+    #hero {
+      padding: 130px 0 70px;
+      background: radial-gradient(circle at 75% 25%, rgba(59, 130, 246, 0.05) 0%, transparent 60%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-light);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      color: var(--primary);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-mono);
+      letter-spacing: 0.02em;
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-size: clamp(38px, 4.5vw, 60px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--text-main);
+      margin-bottom: 16px;
+    }
+    .hero-title span {
+      background: linear-gradient(135deg, var(--primary), #10b981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-desc {
+      color: var(--text-muted);
+      font-size: 16px;
+      line-height: 1.75;
+      margin-bottom: 36px;
+      max-width: 580px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 28px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--text-inverse);
+      box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
+    }
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      color: var(--text-inverse);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+    }
+    .btn-secondary:hover {
+      border-color: var(--border-focus);
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .hero-metrics-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+    }
+
+    .hero-metric-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .metric-value {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text-main);
+      font-family: var(--font-mono);
+      line-height: 1.2;
+    }
+    .metric-value span {
+      color: var(--primary);
+    }
+    .metric-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    /* ── DASHBOARD MONITOR WIDGETS (DRAGGABLE) ── */
+    .dashboard-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .dashboard-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4px;
+    }
+    .dashboard-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .dashboard-widget {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      cursor: grab;
+      position: relative;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+      user-select: none;
+    }
+    .dashboard-widget:active {
+      cursor: grabbing;
+    }
+    .dashboard-widget.dragging {
+      opacity: 0.5;
+      border: 1px dashed var(--primary);
+    }
+    .dashboard-widget.drag-over {
+      border: 2px dashed var(--primary);
+      transform: scale(0.98);
+    }
+
+    .widget-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .widget-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .widget-icon {
+      font-size: 16px;
+      color: var(--text-muted);
+    }
+    .widget-drag-handle {
+      width: 14px;
+      height: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      opacity: 0.3;
+    }
+    .widget-drag-handle span {
+      height: 2px;
+      background-color: var(--text-main);
+      border-radius: 1px;
+    }
+    .dashboard-widget:hover .widget-drag-handle {
+      opacity: 0.7;
+    }
+
+    /* Widget Contents */
+    .metric-flex {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    .gauge-wrapper {
+      position: relative;
+      width: 70px;
+      height: 70px;
+    }
+    .gauge-svg {
+      transform: rotate(-90deg);
+      width: 100%;
+      height: 100%;
+    }
+    .gauge-track {
+      fill: none;
+      stroke: var(--border);
+      stroke-width: 6;
+    }
+    .gauge-fill {
+      fill: none;
+      stroke: var(--primary);
+      stroke-width: 6;
+      stroke-linecap: round;
+      stroke-dasharray: 220;
+      stroke-dashoffset: 220; /* Dynamically animated */
+      transition: stroke-dashoffset 0.8s ease;
+    }
+    .gauge-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .stat-details {
+      flex: 1;
+    }
+    .stat-details-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+    .stat-details-row:last-child {
+      margin-bottom: 0;
+    }
+    .stat-label {
+      color: var(--text-muted);
+    }
+    .stat-val {
+      font-weight: 600;
+      font-family: var(--font-mono);
+    }
+
+    /* Active Services Status Indicators */
+    .services-status-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .service-status-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-sidebar);
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+    .service-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    .service-dot.online {
+      background-color: var(--success);
+      box-shadow: 0 0 6px var(--success);
+    }
+    .service-dot.syncing {
+      background-color: var(--warning);
+      box-shadow: 0 0 6px var(--warning);
+      animation: blink 1s infinite;
+    }
+    .service-name {
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-mono);
+    }
+
+    /* Live Logs Widget */
+    .log-terminal-widget {
+      background: #090c15;
+      border: 1px solid #1a233a;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      height: 80px;
+      overflow-y: auto;
+      color: #38bdf8;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .log-entry {
+      line-height: 1.4;
+      white-space: nowrap;
+    }
+    .log-timestamp {
+      color: var(--text-muted);
+    }
+    .log-text {
+      color: #e5e7eb;
+    }
+    .log-success {
+      color: #34d399;
+    }
+
+    /* ── INTERACTIVE SYSADMIN TERMINAL ── */
+    .terminal-wrapper {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      margin-top: 40px;
+    }
+
+    .terminal-header {
+      background: var(--bg-sidebar);
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .terminal-dot-group {
+      display: flex;
+      gap: 6px;
+    }
+    .terminal-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    .terminal-dot.red { background-color: #ef4444; }
+    .terminal-dot.yellow { background-color: #f59e0b; }
+    .terminal-dot.green { background-color: #10b981; }
+
+    .terminal-header-title {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .terminal-body {
+      background: #060913;
+      padding: 24px;
+      height: 380px;
+      overflow-y: auto;
+      font-family: var(--font-mono);
+      font-size: 14px;
+      color: #38bdf8;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .terminal-welcome {
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+    .terminal-welcome-accent {
+      color: #f472b6;
+      font-weight: bold;
+    }
+
+    .terminal-output-line {
+      line-height: 1.6;
+      word-break: break-word;
+      white-space: pre-wrap;
+    }
+    
+    .terminal-input-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .terminal-prompt {
+      color: #f472b6;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .terminal-input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #e5e7eb;
+      font-family: var(--font-mono);
+      font-size: 14px;
+      flex: 1;
+      caret-color: #38bdf8;
+    }
+
+    .terminal-presets {
+      background: var(--bg-sidebar);
+      padding: 12px 20px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .preset-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .preset-cmd-btn {
+      background: var(--bg-main);
+      border: 1px solid var(--border);
+      color: var(--primary);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .preset-cmd-btn:hover {
+      background: var(--primary);
+      color: var(--text-inverse);
+      border-color: var(--primary);
+    }
+
+    /* ── PHYSICAL SERVER RACK EXPLORER ── */
+    .rack-section-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .rack-cabinet {
+      background: #171d33;
+      border: 6px solid #0f1322;
+      border-radius: 12px;
+      padding: 24px 16px;
+      box-shadow: var(--shadow-lg), inset 0 0 20px rgba(0,0,0,0.8);
+      position: relative;
+    }
+    
+    .rack-cabinet::before {
+      content: 'IT INFRASTRUCTURE CABINET - RACK-01';
+      position: absolute;
+      top: 6px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--font-mono);
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--text-muted);
+      opacity: 0.6;
+      white-space: nowrap;
+    }
+
+    .rack-rail-left, .rack-rail-right {
+      position: absolute;
+      top: 20px;
+      bottom: 20px;
+      width: 8px;
+      background: #111422;
+      border: 1px solid #1e253c;
+    }
+    .rack-rail-left { left: 8px; }
+    .rack-rail-right { right: 8px; }
+
+    .rack-slots-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* Rack Units */
+    .rack-unit {
+      background: linear-gradient(180deg, #242c4c 0%, #171b30 100%);
+      border: 1px solid #2f3962;
+      border-left: 4px solid #4f5a8c;
+      border-right: 4px solid #4f5a8c;
+      border-radius: 4px;
+      position: relative;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    .rack-unit:hover {
+      border-color: var(--primary);
+      box-shadow: 0 0 12px rgba(59,130,246,0.4);
+      transform: scale(1.01);
+    }
+    .rack-unit.active {
+      border-color: #10b981;
+      background: linear-gradient(180deg, #182a44 0%, #0d1e33 100%);
+      box-shadow: 0 0 15px rgba(16,185,129,0.3);
+    }
+
+    /* Sizes */
+    .rack-unit-1u { height: 42px; }
+    .rack-unit-2u { height: 84px; }
+
+    .rack-unit-inner {
+      height: 100%;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .rack-unit-details {
+      display: flex;
+      flex-direction: column;
+    }
+    .rack-unit-title {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      color: #e5e7eb;
+    }
+    .rack-unit-subtitle {
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+    .rack-unit.active .rack-unit-title {
+      color: #10b981;
+    }
+
+    .rack-unit-hardware {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .rack-ears {
+      position: absolute;
+      left: -8px;
+      width: 8px;
+      height: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #3a446c;
+      border: 1px solid #1c223a;
+      border-radius: 2px;
+    }
+    .rack-ears-right {
+      left: auto;
+      right: -8px;
+    }
+
+    .rack-screws {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: #94a3b8;
+      position: absolute;
+    }
+    .screw-tl { top: 4px; left: 4px; }
+    .screw-bl { bottom: 4px; left: 4px; }
+    .screw-tr { top: 4px; right: 4px; }
+    .screw-br { bottom: 4px; right: 4px; }
+
+    .led-group {
+      display: flex;
+      gap: 4px;
+    }
+    .led-indicator {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #374151;
+    }
+    .led-indicator.green {
+      background-color: var(--success);
+      box-shadow: 0 0 4px var(--success);
+    }
+    .led-indicator.blink-green {
+      background-color: var(--success);
+      animation: blink 0.8s infinite;
+    }
+    .led-indicator.amber {
+      background-color: var(--warning);
+      box-shadow: 0 0 4px var(--warning);
+    }
+    .led-indicator.blink-amber {
+      background-color: var(--warning);
+      animation: blink 1.2s infinite;
+    }
+
+    .server-vent {
+      width: 80px;
+      height: 12px;
+      background: repeating-linear-gradient(90deg, #111422, #111422 2px, transparent 2px, transparent 4px);
+      border-radius: 2px;
+      opacity: 0.5;
+    }
+    .rack-unit-2u .server-vent {
+      height: 24px;
+      width: 120px;
+    }
+
+    /* Rack Details Display Panel */
+    .rack-display-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      min-height: 290px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .rack-display-empty {
+      text-align: center;
+      color: var(--text-muted);
+    }
+    .rack-display-empty-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+      opacity: 0.5;
+    }
+
+    .rack-display-content {
+      animation: fadeUp 0.3s ease;
+    }
+    .rack-display-header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+    }
+    .rack-display-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      background: var(--primary-light);
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+    .rack-display-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .rack-display-body {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .rack-display-bullets {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .rack-display-bullet-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .rack-display-bullet-item::before {
+      content: '▸';
+      color: var(--primary);
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    /* ── EXPERIENCE SECTION (TIMELINE) ── */
+    .section-title-wrapper {
+      margin-bottom: 48px;
+    }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--primary);
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .section-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+    }
+
+    .timeline-container {
+      position: relative;
+      padding-left: 32px;
+    }
+    .timeline-container::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--primary), var(--border));
+    }
+
+    .timeline-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      position: relative;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      margin-bottom: 30px;
+    }
+    .timeline-card:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-card:hover {
+      box-shadow: var(--shadow-lg);
+      border-color: var(--border-focus);
+      transform: translateX(4px);
+    }
+
+    .timeline-card::before {
+      content: '';
+      position: absolute;
+      left: -39px;
+      top: 36px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--bg-main);
+      border: 3px solid var(--primary);
+      box-shadow: 0 0 0 4px var(--bg-main);
+      z-index: 2;
+    }
+
+    .timeline-header-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .company-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    
+    .timeline-role {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+      margin-top: 8px;
+    }
+
+    .timeline-period {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .timeline-desc {
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      font-size: 15px;
+    }
+
+    /* Sub-categories in timeline job details */
+    .timeline-subsection-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 18px 0 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .timeline-subsection-title:first-of-type {
+      margin-top: 0;
+    }
+
+    .timeline-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .timeline-bullet-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--text-main);
+    }
+    .timeline-bullet-item::before {
+      content: '✓';
+      color: var(--success);
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .timeline-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tech-pill {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 4px 10px;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+    .tech-pill:hover {
+      border-color: var(--border-focus);
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    /* ── SKILLS SECTION (FILTERABLE) ── */
+    .skills-filter-container {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .filter-btn:hover {
+      border-color: var(--border-focus);
+      color: var(--text-main);
+    }
+    .filter-btn.active {
+      background: var(--primary);
+      color: var(--text-inverse);
+      border-color: var(--primary);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .skill-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-2px);
+      border-color: var(--border-focus);
+    }
+
+    .skill-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 14px;
+    }
+
+    .skill-card-icon {
+      font-size: 20px;
+      width: 40px;
+      height: 40px;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .skill-card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .skill-bars-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .skill-bar-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .skill-bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-main);
+    }
+    .skill-bar-pct {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .skill-bar-track {
+      height: 6px;
+      background-color: var(--bg-sidebar);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .skill-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary) 0%, #10b981 100%);
+      border-radius: 4px;
+      width: 0; /* Dynamic loading */
+      transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ── KEY ACHIEVEMENTS ── */
+    .achieve-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .achieve-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .achieve-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), #10b981);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+    .achieve-card:hover::before {
+      transform: scaleX(1);
+    }
+    .achieve-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+      border-color: var(--border-focus);
+    }
+
+    .achieve-icon {
+      font-size: 24px;
+      width: 44px;
+      height: 44px;
+      background: rgba(16, 185, 129, 0.1);
+      color: #10b981;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .achieve-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.3;
+    }
+    .achieve-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      flex: 1;
+    }
+    .achieve-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .btn-sm {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--bg-sidebar);
+      color: var(--text-main);
+      cursor: pointer;
+      font-family: var(--font-mono);
+      transition: var(--transition);
+    }
+    .btn-sm:hover {
+      border-color: var(--border-focus);
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+    .achieve-impact-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--primary);
+      background: var(--primary-light);
+      border: 1px solid rgba(59, 130, 246, 0.15);
+      padding: 4px 12px;
+      border-radius: 4px;
+      display: inline-block;
+      width: fit-content;
+    }
+
+    /* ── EDUCATION & CERTIFICATIONS ── */
+    .edu-cert-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .edu-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      transition: var(--transition);
+    }
+    .edu-card:hover {
+      box-shadow: var(--shadow-lg);
+      border-color: var(--border-focus);
+    }
+
+    .edu-school-icon {
+      font-size: 26px;
+      width: 52px;
+      height: 52px;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .edu-content {
+      flex: 1;
+    }
+    .edu-degree {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+    .edu-school {
+      font-size: 14px;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+    .edu-affiliation {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .edu-year {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      background: var(--bg-sidebar);
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+      display: inline-block;
+      border: 1px solid var(--border);
+    }
+
+    .cert-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .cert-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: var(--transition);
+    }
+    .cert-card:hover {
+      box-shadow: var(--shadow-lg);
+      border-color: var(--border-focus);
+    }
+
+    .cert-info {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .cert-badge-ico {
+      font-size: 22px;
+    }
+    .cert-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 2px;
+    }
+    .cert-org {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .cert-status-pill {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+    }
+    .cert-status-pill.in-progress {
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: var(--warning);
+    }
+    .cert-status-pill.completed {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: var(--success);
+    }
+    .cert-status-pill.planned {
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: var(--primary);
+    }
+
+    /* ── CONTACT SECTION ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 48px;
+    }
+
+    .contact-info-col {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .contact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-card:hover {
+      border-color: var(--border-focus);
+      box-shadow: var(--shadow);
+    }
+    
+    .contact-icon {
+      font-size: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+    }
+    .contact-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .contact-val {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    /* Interactive Form */
+    .contact-form {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px;
+      box-shadow: var(--shadow);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+    .form-control {
+      width: 100%;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px 16px;
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      font-size: 14px;
+      outline: none;
+      transition: var(--transition);
+    }
+    .form-control:focus {
+      border-color: var(--border-focus);
+      background: var(--bg-card);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+    
+    .form-submit-btn {
+      width: 100%;
+      background: var(--primary);
+      color: var(--text-inverse);
+      padding: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+    .form-submit-btn:hover {
+      background: var(--primary-hover);
+    }
+    .form-status {
+      margin-top: 14px;
+      font-size: 13px;
+      font-weight: 600;
+      text-align: center;
+      display: none;
+    }
+    .form-status.success { color: var(--success); display: block; }
+    .form-status.error { color: var(--danger); display: block; }
+
+    /* ── FOOTER ── */
+    footer {
+      background-color: #050810;
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-muted);
+      text-align: center;
+      transition: var(--transition);
+    }
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+    }
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+    }
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+    .footer-credits {
+      opacity: 0.6;
+    }
+
+    /* ── EDIT MODE CMS OVERLAY ── */
+    body.edit-mode [contenteditable="true"] {
+      outline: 2px dashed var(--primary);
+      outline-offset: 4px;
+      border-radius: 4px;
+      cursor: text;
+    }
+    body.edit-mode [contenteditable="true"]:hover {
+      outline-color: #10b981;
+      background: rgba(16, 185, 129, 0.05);
+    }
+    body.edit-mode [contenteditable="true"]:focus {
+      outline: 2px solid var(--primary-hover);
+      background: rgba(59, 130, 246, 0.08);
+    }
+
+    #edit-toolbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #111827;
+      border-bottom: 2px solid var(--primary);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      z-index: 9999;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      transform: translateY(-100%);
+      transition: transform 0.3s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    #edit-toolbar.visible {
+      transform: translateY(0);
+    }
+
+    .edit-toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .edit-indicator-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      box-shadow: 0 0 8px var(--primary);
+      animation: pulse 1s infinite;
+    }
+    
+    .save-badge {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--success);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: bold;
+      z-index: 9999;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .save-badge.visible {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* ── ANIMATIONS & EFFECTS ── */
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── ATS VIEW / PRINT MODE (SCREEN INVERSION) ── */
+    body.ats-mode {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+      font-family: Arial, Helvetica, sans-serif !important;
+    }
+
+    body.ats-mode header,
+    body.ats-mode footer,
+    body.ats-mode .hero-actions,
+    body.ats-mode .hero-metrics-row,
+    body.ats-mode .dashboard-container,
+    body.ats-mode .terminal-wrapper,
+    body.ats-mode .skills-filter-container,
+    body.ats-mode .rack-cabinet,
+    body.ats-mode .rack-display-panel,
+    body.ats-mode .contact-form,
+    body.ats-mode .theme-toggle-btn,
+    body.ats-mode .ats-toggle-btn .ats-screen-text,
+    body.ats-mode .theme-toggle-btn,
+    body.ats-mode .led-group,
+    body.ats-mode .led-indicator,
+    body.ats-mode .screw-tl, body.ats-mode .screw-tr, body.ats-mode .screw-bl, body.ats-mode .screw-br,
+    body.ats-mode .rack-ears,
+    body.ats-mode .server-vent {
+      display: none !important;
+    }
+
+    /* Keep ATS Header Banner */
+    body.ats-mode .ats-header-banner {
+      display: block !important;
+    }
+
+    /* Reformat Grid to Linear Content */
+    body.ats-mode .hero-grid,
+    body.ats-mode .rack-section-grid,
+    body.ats-mode .edu-cert-grid,
+    body.ats-mode .contact-grid {
+      grid-template-columns: 1fr !important;
+      gap: 20px !important;
+    }
+
+    body.ats-mode .timeline-card,
+    body.ats-mode .skill-card,
+    body.ats-mode .achieve-card,
+    body.ats-mode .edu-card,
+    body.ats-mode .cert-card,
+    body.ats-mode .contact-card {
+      background: none !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin-bottom: 20px !important;
+      color: #000000 !important;
+      border-radius: 0 !important;
+      transform: none !important;
+    }
+
+    body.ats-mode .tech-pill,
+    body.ats-mode .company-badge,
+    body.ats-mode .timeline-period,
+    body.ats-mode .achieve-impact-tag,
+    body.ats-mode .cert-status-pill,
+    body.ats-mode .edu-year {
+      background: none !important;
+      border: 1px solid #000000 !important;
+      color: #000000 !important;
+      border-radius: 0 !important;
+      font-size: 11px !important;
+    }
+
+    body.ats-mode .skill-bar-track {
+      background: #e2e8f0 !important;
+      border-radius: 0 !important;
+    }
+    body.ats-mode .skill-bar-fill {
+      background: #000000 !important;
+      border-radius: 0 !important;
+    }
+
+    body.ats-mode .section-padding {
+      padding: 30px 0 !important;
+    }
+
+    /* Print View Trigger Banner Styles */
+    .ats-header-banner {
+      display: none;
+      background: #f1f5f9;
+      border-bottom: 1px solid #cbd5e1;
+      padding: 16px 24px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10000;
+    }
+    .ats-header-banner-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .ats-header-banner button {
+      background: #0f172a;
+      color: white;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    /* ── RESPONSIVE RESPONSIVENESS ── */
+    @media (max-width: 968px) {
+      .hero-grid,
+      .rack-section-grid,
+      .edu-cert-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .nav-links, .sys-time {
+        display: none;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    /* ── PRINT MEDIA QUERY ── */
+    @media print {
+      /* Hide browser UI Chrome */
+      body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-size: 12px !important;
+        line-height: 1.5 !important;
+      }
+      
+      header, footer, button, .theme-toggle-btn, .ats-toggle-btn,
+      .hero-actions, .hero-metrics-row, .dashboard-container, .terminal-wrapper,
+      .skills-filter-container, .rack-cabinet, .rack-display-panel, .contact-form,
+      .ats-header-banner, .led-group, .led-indicator, .screw-tl, .screw-tr, .screw-bl, .screw-br,
+      .rack-ears, .server-vent {
+        display: none !important;
+      }
+
+      .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+      }
+
+      .section-padding {
+        padding: 20px 0 !important;
+        border-bottom: 1px solid #cbd5e1 !important;
+        page-break-inside: avoid;
+      }
+
+      .hero-grid, .rack-section-grid, .edu-cert-grid, .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
+
+      .timeline-card, .skill-card, .achieve-card, .edu-card, .cert-card, .contact-card {
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin-bottom: 14px !important;
+        color: #000000 !important;
+        page-break-inside: avoid;
+      }
+
+      .tech-pill, .company-badge, .timeline-period, .achieve-impact-tag, .cert-status-pill, .edu-year {
+        border: 1px solid #000000 !important;
+        color: #000000 !important;
+        background: none !important;
+        border-radius: 0 !important;
+        font-size: 10px !important;
+      }
+
+      .skill-bar-track {
+        display: none !important; /* Hide bars completely in physical prints for clean text */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ATS Resume Bar (Reveals when ATS Mode is ON) -->
+  <div class="ats-header-banner" id="atsBanner">
+    <div class="ats-header-banner-inner">
+      <span>📄 You are in <strong>ATS-Friendly Resume Mode</strong>. Decorative styling is hidden.</span>
+      <div style="display:flex; gap:10px;">
+        <button onclick="window.print()">Print / Save PDF</button>
+        <button onclick="toggleATSMode()" style="background:#e2e8f0; color:#0f172a;">Back to Interactive Portfolio</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT CMS TOOLBAR -->
+  <div id="edit-toolbar">
+    <div class="edit-toolbar-left">
+      <div class="edit-indicator-dot"></div>
+      <strong>✏️ DEVELOPER EDIT MODE ACTIVE</strong>
+      <span style="opacity: 0.6; margin-left: 8px;">— Edit any text inline. Press Ctrl+S to save changes.</span>
+    </div>
+    <button onclick="toggleEditMode()" style="background:#dc2626; color:white; border:none; padding:4px 10px; border-radius:4px; font-weight:600; cursor:pointer;">Exit Edit Mode</button>
+  </div>
+
+  <!-- SAVED ALERTS -->
+  <div class="save-badge" id="saveBadge">
+    <span>✓ Changes saved & downloaded locally!</span>
+  </div>
+
+  <!-- HEADER -->
+  <header id="site-header">
+    <div class="container nav-inner">
+      <div class="nav-brand">
+        <div class="nav-logo">MK</div>
+        <div class="nav-title-group">
+          <span class="nav-name" contenteditable="false">pravieen MK</span>
+          <span class="nav-status">
+            <span class="nav-status-dot"></span>
+            <span contenteditable="false">SysAdmin Server Status: Active</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="nav-center-info">
+        <!-- IST Time zone representation -->
+        <span class="sys-time">
+          <span>🕒</span>
+          <span id="ist-clock">00:00:00 IST</span>
+        </span>
+      </div>
+
+      <div class="nav-links">
+        <a href="#hero" class="active">Overview</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#rack-explorer">Rack Infra</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Theme Mode Toggle -->
+        <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+          <span id="theme-icon">☀️</span>
+        </button>
+
+        <!-- ATS Resume Toggle -->
+        <button class="ats-toggle-btn" onclick="toggleATSMode()" aria-label="Toggle ATS format">
+          <span>📄</span>
+          <span class="ats-screen-text">ATS Resume</span>
+        </button>
+
+        <a href="mailto:mkpravieen97@gmail.com" class="nav-cta">Hire Me</a>
+
+        <!-- Hamburger Icon -->
+        <button class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#hero" onclick="toggleMobileMenu()">Overview</a>
+    <a href="#experience" onclick="toggleMobileMenu()">Experience</a>
+    <a href="#skills" onclick="toggleMobileMenu()">Skills</a>
+    <a href="#rack-explorer" onclick="toggleMobileMenu()">Rack Infra</a>
+    <a href="#achievements" onclick="toggleMobileMenu()">Achievements</a>
+    <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+    <a href="mailto:mkpravieen97@gmail.com">Hire Me</a>
+  </div>
+
+  <!-- ══ HERO / MONITORS SECTION ══ -->
+  <section id="hero" class="section-padding">
+    <div class="container hero-grid">
+      
+      <!-- Text / Intro -->
+      <div>
+        <div class="hero-eyebrow" contenteditable="false">IT Operations &amp; Infrastructure Management</div>
+        <h1 class="hero-title" contenteditable="false">pravieen <span>MK</span></h1>
+        <div class="hero-subtitle" contenteditable="false">Associate System Administrator</div>
+        <p class="hero-desc" contenteditable="false">
+          Bangalore-based IT professional with 1+ year of enterprise IT experience delivering reliable end-user computing support, Active Directory configurations, M365 administrations, device imaging, and hardware troubleshooting in fast-paced global environments. Sourcing, deployment, and maintenance.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Connect With Me</a>
+          <a href="#rack-explorer" class="btn btn-secondary">Explore Rack Infra</a>
+          <button class="btn btn-secondary" onclick="runTerminalCommand('ping mindteck.us')">📟 Test Ping</button>
+        </div>
+        
+        <div class="hero-metrics-row">
+          <div class="hero-metric-item">
+            <div class="metric-value" contenteditable="false">1<span>yr+</span></div>
+            <div class="metric-label" contenteditable="false">IT Operations</div>
+          </div>
+          <div class="hero-metric-item">
+            <div class="metric-value" contenteditable="false">500<span>+</span></div>
+            <div class="metric-label" contenteditable="false">Supported Users</div>
+          </div>
+          <div class="hero-metric-item">
+            <div class="metric-value" contenteditable="false">200<span>+</span></div>
+            <div class="metric-label" contenteditable="false">Endpoints Supported</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Draggable Monitoring Cards -->
+      <div class="dashboard-container">
+        <div class="dashboard-header">
+          <span class="dashboard-title">
+            <span>📊</span> LIVE SYSTEM MONITOR (Draggable)
+          </span>
+          <span style="font-size: 11px; opacity: 0.6;" class="ats-screen-text">Drag cards to reorder</span>
+        </div>
+
+        <div class="dashboard-grid" id="draggable-dashboard">
+          
+          <!-- Card 1: Resource Monitor -->
+          <div class="dashboard-widget" draggable="true" id="widget-resources">
+            <div class="widget-header">
+              <span class="widget-title">
+                <span class="widget-icon">⚡</span> CPU &amp; RAM Load
+              </span>
+              <div class="widget-drag-handle">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="metric-flex">
+              <div class="gauge-wrapper">
+                <svg class="gauge-svg" viewBox="0 0 80 80">
+                  <circle class="gauge-track" cx="40" cy="40" r="35"></circle>
+                  <circle class="gauge-fill" id="cpu-gauge" cx="40" cy="40" r="35"></circle>
+                </svg>
+                <div class="gauge-text" id="cpu-text">24%</div>
+              </div>
+              <div class="stat-details">
+                <div class="stat-details-row">
+                  <span class="stat-label">Windows RAM</span>
+                  <span class="stat-val" id="ram-usage">5.8 / 16.0 GB</span>
+                </div>
+                <div class="stat-details-row">
+                  <span class="stat-label">Ubuntu VM Load</span>
+                  <span class="stat-val" id="vm-load">0.32 (OK)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Network / Services Status -->
+          <div class="dashboard-widget" draggable="true" id="widget-services">
+            <div class="widget-header">
+              <span class="widget-title">
+                <span class="widget-icon">🌐</span> Services Status
+              </span>
+              <div class="widget-drag-handle">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="services-status-list">
+              <div class="service-status-item">
+                <span class="service-dot online"></span>
+                <span class="service-name">Active Directory</span>
+              </div>
+              <div class="service-status-item">
+                <span class="service-dot online"></span>
+                <span class="service-name">MS Exchange</span>
+              </div>
+              <div class="service-status-item">
+                <span class="service-dot online"></span>
+                <span class="service-name">Microsoft 365</span>
+              </div>
+              <div class="service-status-item">
+                <span class="service-dot syncing"></span>
+                <span class="service-name">Domain Sync</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Live System Log Stream -->
+          <div class="dashboard-widget" draggable="true" id="widget-logs">
+            <div class="widget-header">
+              <span class="widget-title">
+                <span class="widget-icon">📝</span> DHCP &amp; Auth Logs
+              </span>
+              <div class="widget-drag-handle">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="log-terminal-widget" id="realtime-logs">
+              <div class="log-entry"><span class="log-timestamp">[12:04:12]</span> <span class="log-text">AD Replication checked</span> <span class="log-success">SUCCESS</span></div>
+              <div class="log-entry"><span class="log-timestamp">[12:04:18]</span> <span class="log-text">DHCP IP Allocation assigned to client 10.0.1.28</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── WORK TIMELINE SECTION ── -->
+  <section id="experience" class="section-padding">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="section-label">Work Experience</span>
+        <h2 class="section-title">Professional <span>History</span></h2>
+      </div>
+
+      <div class="timeline-container">
+        
+        <!-- Mindteck Ltd Role -->
+        <div class="timeline-card reveal">
+          <div class="timeline-header-meta">
+            <div>
+              <div class="company-badge" contenteditable="false">🏢 Mindteck India Limited</div>
+              <h3 class="timeline-role" contenteditable="false">Associate System Administrator</h3>
+            </div>
+            <div>
+              <span class="timeline-period" contenteditable="false">📅 April 2025 — Present</span>
+            </div>
+          </div>
+          
+          <p class="timeline-desc" contenteditable="false">
+            Responsible for the day-to-day IT operations, systems, network, and hardware setup across all organization departments. Acting as the primary support administrator for local and Microsoft cloud systems.
+          </p>
+
+          <!-- Categorized Experience modules to match updated resume -->
+          <div class="timeline-subsection-title">Hardware Repair &amp; Device Support</div>
+          <div class="timeline-highlights">
+            <div class="timeline-bullet-item" contenteditable="false">Perform hands-on hardware repairs on enterprise laptops and desktops including battery replacements, cracked screen and display panel replacements, and keyboard/peripheral swap-outs to minimize downtime.</div>
+            <div class="timeline-bullet-item" contenteditable="false">Diagnose component-level hardware failures (RAM, HDD/SSD, charging ports) and coordinate warranty replacements or parts procurement.</div>
+            <div class="timeline-bullet-item" contenteditable="false">Prepare, image, and configure laptops for new-hire onboarding (installing standard software suites, applying security policies, asset tagging).</div>
+            <div class="timeline-bullet-item" contenteditable="false">Manage a pool of 200+ enterprise endpoints, conducting periodic audits to reconcile physical assets against systems.</div>
+          </div>
+
+          <div class="timeline-subsection-title">Meeting Room &amp; Executive Support</div>
+          <div class="timeline-highlights">
+            <div class="timeline-bullet-item" contenteditable="false">Set up and support conference rooms and meeting spaces (projectors, displays, Teams Rooms devices, and video conferencing equipment) ahead of executive meetings.</div>
+            <div class="timeline-bullet-item" contenteditable="false">Provide white-glove on-site support during executive and all-hands meetings, troubleshooting AV issues in real time.</div>
+            <div class="timeline-bullet-item" contenteditable="false">Conduct routine audits of all meeting room technologies to proactively identify and resolve equipment faults.</div>
+          </div>
+
+          <div class="timeline-subsection-title">Inventory, Documentation &amp; On-Call</div>
+          <div class="timeline-highlights">
+            <div class="timeline-bullet-item" contenteditable="false">Maintain up-to-date documentation for team processes, SOPs, and troubleshooting guides to reduce repeat support tickets.</div>
+            <div class="timeline-bullet-item" contenteditable="false">Participate in on-call after-hours and weekend rotating schedule, providing remote/on-site support for priority hardware failures and meeting room emergencies.</div>
+            <div class="timeline-bullet-item" contenteditable="false">Coordinate with procurement and vendors for hardware spare parts, warranty claims, and loaner logistics.</div>
+          </div>
+
+          <div class="timeline-subsection-title">Windows Administration &amp; Software Support</div>
+          <div class="timeline-highlights">
+            <div class="timeline-bullet-item" contenteditable="false">Administer Active Directory for user account creation, group membership, organizational units (OUs), and profile management.</div>
+            <div class="timeline-bullet-item" contenteditable="false">Manage Microsoft 365 licensing, Outlook/Exchange configurations, and VPN credentials for 200+ active enterprise users.</div>
+            <div class="timeline-bullet-item" contenteditable="false">Configure and troubleshoot network connectivity issues (DHCP, DNS, TCP/IP) for remote and on-site users.</div>
+            <div class="timeline-bullet-item" contenteditable="false">Led the organizational domain migration (.com to .us) — successfully migrating user email databases from IMAP to Microsoft Exchange with zero records lost.</div>
+          </div>
+
+          <div class="timeline-tags">
+            <span class="tech-pill" contenteditable="false">Active Directory</span>
+            <span class="tech-pill" contenteditable="false">Microsoft 365</span>
+            <span class="tech-pill" contenteditable="false">Microsoft Exchange</span>
+            <span class="tech-pill" contenteditable="false">Windows 11 Enterprise</span>
+            <span class="tech-pill" contenteditable="false">Ubuntu Linux</span>
+            <span class="tech-pill" contenteditable="false">IMAP Migration</span>
+            <span class="tech-pill" contenteditable="false">AV &amp; Teams Rooms</span>
+            <span class="tech-pill" contenteditable="false">IT Asset Inventory</span>
+            <span class="tech-pill" contenteditable="false">L1/L2 On-Call</span>
+          </div>
+        </div>
+
+        <!-- Sales Executive Role (New item from resume) -->
+        <div class="timeline-card reveal">
+          <div class="timeline-header-meta">
+            <div>
+              <div class="company-badge" contenteditable="false">🏢 Comfy Shoemakers</div>
+              <h3 class="timeline-role" contenteditable="false">Sales Executive</h3>
+            </div>
+            <div>
+              <span class="timeline-period" contenteditable="false">📅 Oct 2018 — March 2019 · Erode, Tamil Nadu</span>
+            </div>
+          </div>
+          <p class="timeline-desc" contenteditable="false">
+            Focused on client interaction and customer satisfaction in a consumer environment.
+          </p>
+          <div class="timeline-highlights">
+            <div class="timeline-bullet-item" contenteditable="false">Developed strong verbal communication, active listening, and customer-facing skills directly applicable to modern end-user support and executive assistance.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TECHNICAL SKILLS (FILTERABLE) ── -->
+  <section id="skills" class="section-padding">
+    <div class="container">
+      <div class="section-title-wrapper" style="text-align:center;">
+        <span class="section-label">Technical Skills</span>
+        <h2 class="section-title">Core <span>Competencies</span></h2>
+      </div>
+
+      <div class="skills-filter-container">
+        <button class="filter-btn active" onclick="filterSkills('all')">All Skills</button>
+        <button class="filter-btn" onclick="filterSkills('os')">OS &amp; Workstations</button>
+        <button class="filter-btn" onclick="filterSkills('cloud')">Cloud &amp; M365</button>
+        <button class="filter-btn" onclick="filterSkills('identity')">Identity &amp; Dir</button>
+        <button class="filter-btn" onclick="filterSkills('net-hw')">Network &amp; Hardware</button>
+      </div>
+
+      <div class="skills-grid" id="skills-grid-container">
+        
+        <!-- OS and Workstations -->
+        <div class="skill-card reveal" data-category="os">
+          <div class="skill-card-header">
+            <span class="skill-card-icon">🖥️</span>
+            <span class="skill-card-title" contenteditable="false">OS &amp; Workstations</span>
+          </div>
+          <div class="skill-bars-list">
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span contenteditable="false">Windows 11 Configuration</span><span class="skill-bar-pct">92%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="92%"></div></div>
+            </div>
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span contenteditable="false">Ubuntu Linux Workstations</span><span class="skill-bar-pct">80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="80%"></div></div>
+            </div>
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span contenteditable="false">Device OS Imaging &amp; Config</span><span class="skill-bar-pct">88%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="88%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Microsoft Cloud -->
+        <div class="skill-card reveal" data-category="cloud">
+          <div class="skill-card-header">
+            <span class="skill-card-icon">☁️</span>
+            <span class="skill-card-title" contenteditable="false">Microsoft Cloud Administration</span>
+          </div>
+          <div class="skill-bars-list">
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span contenteditable="false">Microsoft 365 Admin Portal</span><span class="skill-bar-pct">90%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="90%"></div></div>
+            </div>
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span contenteditable="false">Exchange Online Management</span><span class="skill-bar-pct">82%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="82%"></div></div>
+            </div>
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span contenteditable="false">SharePoint &amp; OneDrive Admin</span><span class="skill-bar-pct">78%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="78%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Identity Management -->
+        <div class="skill-card reveal" data-category="identity">
+          <div class="skill-card-header">
+            <span class="skill-card-icon">🔐</span>
+            <span class="skill-card-title" contenteditable="false">Identity &amp; Group Directory</span>
+          </div>
+          <div class="skill-bars-list">
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span contenteditable="false">Active Directory Lifecycle</span><span class="skill-bar-pct">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="85%"></div></div>
+            </div>
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span contenteditable="false">Group Policy configuration</span><span class="skill-bar-pct">72%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="72%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Networking and Hardware -->
+        <div class="skill-card reveal" data-category="net-hw">
+          <div class="skill-card-header">
+            <span class="skill-card-icon">🌐</span>
+            <span class="skill-card-title" contenteditable="false">Network &amp; Hardware Support</span>
+          </div>
+          <div class="skill-bars-list">
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span contenteditable="false">LAN/Wi-Fi Troubleshooting</span><span class="skill-bar-pct">82%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="82%"></div></div>
+            </div>
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span contenteditable="false">IT Asset Inventory &amp; Repairs</span><span class="skill-bar-pct">90%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="90%"></div></div>
+            </div>
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span contenteditable="false">AV Room setup &amp; Support</span><span class="skill-bar-pct">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="85%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Learning Cloud -->
+        <div class="skill-card reveal" data-category="cloud">
+          <div class="skill-card-header">
+            <span class="skill-card-icon">📈</span>
+            <span class="skill-card-title" contenteditable="false">DevOps &amp; Cloud (Learning)</span>
+          </div>
+          <div class="skill-bars-list">
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span contenteditable="false">AWS Cloud Prac (Preparing)</span><span class="skill-bar-pct">50%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="50%"></div></div>
+            </div>
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span contenteditable="false">Bash &amp; Command scripting</span><span class="skill-bar-pct">50%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="50%"></div></div>
+            </div>
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span contenteditable="false">Git / Version Control</span><span class="skill-bar-pct">55%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="55%"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PHYSICAL SERVER RACK EXPLORER ── -->
+  <section id="rack-explorer" class="section-padding">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="section-label">Server Rack Infra</span>
+        <h2 class="section-title">Infrastructure <span>Explorer</span></h2>
+      </div>
+
+      <div class="rack-section-grid">
+        
+        <!-- Left Side: Interactive Cabinet -->
+        <div class="rack-cabinet">
+          <!-- Rails -->
+          <div class="rack-rail-left"></div>
+          <div class="rack-rail-right"></div>
+          
+          <div class="rack-slots-container">
+            
+            <!-- Unit 04: Switch Router -->
+            <div class="rack-unit rack-unit-1u" onclick="selectRackUnit('switch')" id="rack-switch">
+              <div class="rack-ears"></div><div class="rack-ears-right"></div>
+              <div class="rack-screws screw-tl"></div><div class="rack-screws screw-tr"></div>
+              <div class="rack-screws screw-bl"></div><div class="rack-screws screw-br"></div>
+              <div class="rack-unit-inner">
+                <div class="rack-unit-details">
+                  <span class="rack-unit-title">R01-U04 ROUTER SWITCH</span>
+                  <span class="rack-unit-subtitle">Local Network Routing &amp; AV Setup</span>
+                </div>
+                <div class="rack-unit-hardware">
+                  <div class="server-vent"></div>
+                  <div class="led-group">
+                    <span class="led-indicator green"></span>
+                    <span class="led-indicator blink-green"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unit 03: Exchange Server -->
+            <div class="rack-unit rack-unit-1u" onclick="selectRackUnit('exchange')" id="rack-exchange">
+              <div class="rack-ears"></div><div class="rack-ears-right"></div>
+              <div class="rack-screws screw-tl"></div><div class="rack-screws screw-tr"></div>
+              <div class="rack-screws screw-bl"></div><div class="rack-screws screw-br"></div>
+              <div class="rack-unit-inner">
+                <div class="rack-unit-details">
+                  <span class="rack-unit-title">R01-U03 MAIL-EXCHANGE</span>
+                  <span class="rack-unit-subtitle">IMAP to Exchange Online migration</span>
+                </div>
+                <div class="rack-unit-hardware">
+                  <div class="server-vent"></div>
+                  <div class="led-group">
+                    <span class="led-indicator green"></span>
+                    <span class="led-indicator amber"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unit 02: AD DC Controller -->
+            <div class="rack-unit rack-unit-2u" onclick="selectRackUnit('ad')" id="rack-ad">
+              <div class="rack-ears"></div><div class="rack-ears-right"></div>
+              <div class="rack-screws screw-tl"></div><div class="rack-screws screw-tr"></div>
+              <div class="rack-screws screw-bl"></div><div class="rack-screws screw-br"></div>
+              <div class="rack-unit-inner">
+                <div class="rack-unit-details">
+                  <span class="rack-unit-title">R01-U02 ACTIVE DIRECTORY DC</span>
+                  <span class="rack-unit-subtitle">Domain Controller - WS2022</span>
+                </div>
+                <div class="rack-unit-hardware">
+                  <div class="server-vent"></div>
+                  <div class="led-group">
+                    <span class="led-indicator green"></span>
+                    <span class="led-indicator blink-green"></span>
+                    <span class="led-indicator green"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unit 01: IT Asset Database -->
+            <div class="rack-unit rack-unit-2u" onclick="selectRackUnit('assets')" id="rack-assets">
+              <div class="rack-ears"></div><div class="rack-ears-right"></div>
+              <div class="rack-screws screw-tl"></div><div class="rack-screws screw-tr"></div>
+              <div class="rack-screws screw-bl"></div><div class="rack-screws screw-br"></div>
+              <div class="rack-unit-inner">
+                <div class="rack-unit-details">
+                  <span class="rack-unit-title">R01-U01 IT-ASSETS-MGR</span>
+                  <span class="rack-unit-subtitle">Inventory Database System</span>
+                </div>
+                <div class="rack-unit-hardware">
+                  <div class="server-vent"></div>
+                  <div class="led-group">
+                    <span class="led-indicator green"></span>
+                    <span class="led-indicator blink-amber"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Side: Details Screen Panel -->
+        <div class="rack-display-panel" id="rackDisplayPanel">
+          <div class="rack-display-empty" id="rackEmptyState">
+            <div class="rack-display-empty-icon">🖧</div>
+            <h3>IT Infrastructure Cabinet Active</h3>
+            <p style="margin-top: 10px; font-size: 14px;">Select any physical server unit in the cabinet rack structure to inspect pravieen's operational setups and deployment history on it.</p>
+          </div>
+          
+          <div class="rack-display-content" id="rackDisplayContent" style="display:none;">
+            <div class="rack-display-header">
+              <span class="rack-display-tag" id="displayUnitTag">Unit 00</span>
+              <h3 class="rack-display-title" id="displayUnitTitle">Server Title</h3>
+            </div>
+            <div class="rack-display-body">
+              <p id="displayUnitDesc">Description goes here</p>
+              <div class="rack-display-bullets" id="displayUnitBullets">
+                <!-- Bullets dynamically rendered -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+      <!-- Interactive Terminal Shell -->
+      <div class="terminal-wrapper reveal">
+        <div class="terminal-header">
+          <div class="terminal-dot-group">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+          </div>
+          <div class="terminal-header-title">pravieen-mk@sysadmin:~ (Console Emulator)</div>
+          <div></div>
+        </div>
+        <div class="terminal-body" id="terminalConsole">
+          <div class="terminal-welcome">
+            <div>====================================================================</div>
+            <div>Welcome to the SysAdmin Interactive Terminal Console v1.0.2</div>
+            <div>Managed and engineered by: <span class="terminal-welcome-accent">pravieen MK</span></div>
+            <div>Type <span class="terminal-welcome-accent">help</span> to list commands or click shortcuts below.</div>
+            <div>====================================================================</div>
+          </div>
+        </div>
+        <div class="terminal-presets">
+          <span class="preset-label">QUICK CMDS:</span>
+          <button class="preset-cmd-btn" onclick="runTerminalCommand('help')">help</button>
+          <button class="preset-cmd-btn" onclick="runTerminalCommand('about')">about</button>
+          <button class="preset-cmd-btn" onclick="runTerminalCommand('skills')">skills</button>
+          <button class="preset-cmd-btn" onclick="runTerminalCommand('ping mindteck.us')">ping</button>
+          <button class="preset-cmd-btn" onclick="runTerminalCommand('stats')">stats</button>
+          <button class="preset-cmd-btn" onclick="runTerminalCommand('clear')">clear</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── KEY ACHIEVEMENTS & AWARDS ── -->
+  <section id="achievements" class="section-padding">
+    <div class="container">
+      <div class="section-title-wrapper" style="text-align:center;">
+        <span class="section-label">Achievements &amp; Recognitions</span>
+        <h2 class="section-title">Awards &amp; <span>Deliverables</span></h2>
+      </div>
+
+      <div class="achieve-grid">
+        
+        <!-- Quarter Champ Award Card -->
+        <div class="achieve-card reveal" style="border: 1px solid rgba(16, 185, 129, 0.4); background: linear-gradient(135deg, var(--bg-card) 0%, rgba(16, 185, 129, 0.05) 100%);">
+          <div class="achieve-icon" style="background:rgba(16, 185, 129, 0.15); color:#10b981;">🏆</div>
+          <h3 class="achieve-title" contenteditable="false">Quarter Champ Award — Q1 2026</h3>
+          <p class="achieve-desc" contenteditable="false">
+            Awarded by Mindteck India Limited in recognition for outstanding performance, exceptional work quality, and going above and beyond in desktop support and infrastructure operations.
+          </p>
+          <div class="achieve-actions">
+            <a href="Quarter Champ Certificate_Pravieen M K.pdf" target="_blank" class="btn-sm">
+              <span>📄</span> View Certificate PDF
+            </a>
+          </div>
+          <span class="achieve-impact-tag" style="background:rgba(16, 185, 129, 0.15); color:#10b981; border-color:rgba(16, 185, 129, 0.2);" contenteditable="false">Mindteck Corp Recognition</span>
+        </div>
+
+        <!-- Domain Migration -->
+        <div class="achieve-card reveal">
+          <div class="achieve-icon">🔄</div>
+          <h3 class="achieve-title" contenteditable="false">M365 Accounts Domain Migration</h3>
+          <p class="achieve-desc" contenteditable="false">
+            Created 200+ Active Directory accounts and allocated configured laptops for a company-wide email migration project, completing all tasks on schedule with zero records/data loss.
+          </p>
+          <span class="achieve-impact-tag" contenteditable="false">200+ Accounts Sync Completed</span>
+        </div>
+
+        <!-- Mean Response Time SLA -->
+        <div class="achieve-card reveal">
+          <div class="achieve-icon">⏱️</div>
+          <h3 class="achieve-title" contenteditable="false">Exceeding SLA Metrics Uptime</h3>
+          <p class="achieve-desc" contenteditable="false">
+            Maintained a Mean Response Time (MRT) of 7.3 hours/tickets, consistently exceeding strict SLA targets and delivering high end-user satisfaction scores.
+          </p>
+          <span class="achieve-impact-tag" contenteditable="false">MRT 7.3 Exceeding Target</span>
+        </div>
+
+        <!-- Documentation library -->
+        <div class="achieve-card reveal">
+          <div class="achieve-icon">📝</div>
+          <h3 class="achieve-title" contenteditable="false">Hardware SOP Knowledge Base</h3>
+          <p class="achieve-desc" contenteditable="false">
+            Built and maintained a detailed documentation library of hardware repair and deployment troubleshooting SOP articles, reducing common ticket resolution times.
+          </p>
+          <span class="achieve-impact-tag" contenteditable="false">Reduced Ticket SLA Turnaround</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ACADEMIC / EDUCATION ── -->
+  <section class="section-padding" style="background-color: var(--bg-sidebar);">
+    <div class="container edu-cert-grid">
+      
+      <!-- Education column -->
+      <div>
+        <div class="section-title-wrapper">
+          <span class="section-label">Academic Profile</span>
+          <h2 class="section-title">Education</h2>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-school-icon">🎓</div>
+          <div class="edu-content">
+            <h3 class="edu-degree" contenteditable="false">Bachelor of Engineering — EEE</h3>
+            <span class="edu-school" contenteditable="false">KSR Institute for Engineering and Technology</span>
+            <div class="edu-affiliation" contenteditable="false">Tiruchengode, Tamil Nadu</div>
+            <span class="edu-year" contenteditable="false">2018 Graduated</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications column -->
+      <div>
+        <div class="section-title-wrapper">
+          <span class="section-label">Industry Training</span>
+          <h2 class="section-title">Certifications</h2>
+        </div>
+
+        <div class="cert-list">
+          
+          <div class="cert-card reveal">
+            <div class="cert-info">
+              <span class="cert-badge-ico">☁️</span>
+              <div>
+                <h4 class="cert-name" contenteditable="false">AWS Certified Cloud Practitioner</h4>
+                <span class="cert-org" contenteditable="false">Amazon Web Services</span>
+              </div>
+            </div>
+            <span class="cert-status-pill in-progress" contenteditable="false">In Progress</span>
+          </div>
+
+          <div class="cert-card reveal">
+            <div class="cert-info">
+              <span class="cert-badge-ico">🪟</span>
+              <div>
+                <h4 class="cert-name" contenteditable="false">Microsoft 365 Certified: Fundamentals (MS-900)</h4>
+                <span class="cert-org" contenteditable="false">Microsoft</span>
+              </div>
+            </div>
+            <span class="cert-status-pill planned" contenteditable="false">Planned</span>
+          </div>
+
+          <div class="cert-card reveal">
+            <div class="cert-info">
+              <span class="cert-badge-ico">🔐</span>
+              <div>
+                <h4 class="cert-name" contenteditable="false">Microsoft Identity &amp; Access Admin (SC-300)</h4>
+                <span class="cert-org" contenteditable="false">Microsoft</span>
+              </div>
+            </div>
+            <span class="cert-status-pill planned" contenteditable="false">Planned</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CONTACT & CONNECT ── -->
+  <section id="contact" class="section-padding">
+    <div class="container contact-grid">
+      
+      <!-- Contact Info -->
+      <div class="contact-info-col">
+        <div class="section-title-wrapper">
+          <span class="section-label">Get In Touch</span>
+          <h2 class="section-title">Let's <span>Connect</span></h2>
+        </div>
+        
+        <p style="color: var(--text-muted); font-size: 15px; line-height: 1.7; margin-bottom: 20px;" contenteditable="false">
+          Actively looking for System Administrator, IT Operations Engineer, and Desktop Support positions in Bangalore (hybrid/on-site).
+        </p>
+
+        <div class="contact-card">
+          <span class="contact-icon">✉️</span>
+          <div class="contact-details">
+            <span class="contact-label">EMAIL ADDRESS</span>
+            <a href="mailto:mkpravieen97@gmail.com" class="contact-val" contenteditable="false">mkpravieen97@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <span class="contact-icon">💼</span>
+          <div class="contact-details">
+            <span class="contact-label">LINKEDIN</span>
+            <a href="https://linkedin.com/in/mk-pravieen" target="_blank" rel="noopener" class="contact-val" contenteditable="false">linkedin.com/in/mk-pravieen</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <span class="contact-icon">🐙</span>
+          <div class="contact-details">
+            <span class="contact-label">GITHUB</span>
+            <a href="https://github.com/mkpravieen97" target="_blank" rel="noopener" class="contact-val" contenteditable="false">github.com/mkpravieen97</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <span class="contact-icon">📍</span>
+          <div class="contact-details">
+            <span class="contact-label">OFFICE LOCATION</span>
+            <span class="contact-val" contenteditable="false">Bangalore, Karnataka, India</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Mail Contact Form -->
+      <form id="portfolioContactForm" class="contact-form" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label for="contact-name">Your Full Name</label>
+          <input type="text" id="contact-name" class="form-control" placeholder="e.g. John Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="contact-email">Email Address</label>
+          <input type="email" id="contact-email" class="form-control" placeholder="e.g. john@company.com" required>
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Inquiry / Message</label>
+          <textarea id="contact-message" class="form-control" rows="5" placeholder="Let's collaborate..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit-btn">
+          <span>📨</span> Send Message
+        </button>
+        <div id="contactFormStatus" class="form-status"></div>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-links">
+        <a href="#hero">Overview</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#rack-explorer">Rack Infra</a>
+        <a href="#achievements">Achievements</a>
+        <a href="javascript:void(0)" onclick="toggleEditMode()" style="color:var(--primary); font-weight:600;">✏️ Edit Content</a>
+      </div>
+      <div class="footer-credits">
+        <span contenteditable="false">© 2026 pravieen MK — Systems &amp; Infrastructure Portfolio</span><br>
+        <span style="font-size: 11px; opacity: 0.6; margin-top: 4px; display:block;" contenteditable="false">Bangalore, India · All Rights Reserved</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS SCRIPTS -->
+  <script>
+    /* ── SYSTEM TIME CLOCK (IST) ── */
+    function updateISTClock() {
+      const options = { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+      try {
+        const formatter = new Intl.DateTimeFormat('en-US', options);
+        const timeStr = formatter.format(new Date());
+        document.getElementById('ist-clock').textContent = `${timeStr} IST`;
+      } catch(e) {
+        // Fallback
+        const d = new Date();
+        document.getElementById('ist-clock').textContent = d.toLocaleTimeString();
+      }
+    }
+    setInterval(updateISTClock, 1000);
+    updateISTClock();
+
+    /* ── LIGHT/DARK MODE ── */
+    function toggleTheme() {
+      const html = document.documentElement;
+      const themeIcon = document.getElementById('theme-icon');
+      if (html.getAttribute('data-theme') === 'light') {
+        html.setAttribute('data-theme', 'dark');
+        themeIcon.textContent = '☀️';
+      } else {
+        html.setAttribute('data-theme', 'light');
+        themeIcon.textContent = '🌙';
+      }
+    }
+
+    /* ── ATS PREVIEW MODE ── */
+    function toggleATSMode() {
+      const body = document.body;
+      const atsBanner = document.getElementById('atsBanner');
+      const isATS = body.classList.toggle('ats-mode');
+      
+      if(isATS) {
+        atsBanner.style.display = 'block';
+      } else {
+        atsBanner.style.display = 'none';
+      }
+    }
+
+    /* ── MOBILE MENU ── */
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      if(menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
+    }
+
+    /* ── DRAGGABLE DASHBOARD SYSTEM ── */
+    let dragSrcEl = null;
+
+    function handleDragStart(e) {
+      dragSrcEl = this;
+      this.classList.add('dragging');
+      e.dataTransfer.effectAllowed = 'move';
+    }
+
+    function handleDragOver(e) {
+      if (e.preventDefault) e.preventDefault();
+      return false;
+    }
+
+    function handleDragEnter(e) {
+      this.classList.add('drag-over');
+    }
+
+    function handleDragLeave(e) {
+      this.classList.remove('drag-over');
+    }
+
+    function handleDrop(e) {
+      if (e.stopPropagation) e.stopPropagation();
+      this.classList.remove('drag-over');
+      
+      if (dragSrcEl !== this) {
+        const parent = this.parentNode;
+        const children = Array.from(parent.children);
+        const dragIdx = children.indexOf(dragSrcEl);
+        const targetIdx = children.indexOf(this);
+        
+        if (dragIdx < targetIdx) {
+          parent.insertBefore(dragSrcEl, this.nextSibling);
+        } else {
+          parent.insertBefore(dragSrcEl, this);
+        }
+      }
+      return false;
+    }
+
+    function handleDragEnd(e) {
+      this.classList.remove('dragging');
+      document.querySelectorAll('.dashboard-widget').forEach(w => w.classList.remove('drag-over'));
+    }
+
+    const widgets = document.querySelectorAll('.dashboard-widget');
+    widgets.forEach(w => {
+      w.addEventListener('dragstart', handleDragStart);
+      w.addEventListener('dragover', handleDragOver);
+      w.addEventListener('dragenter', handleDragEnter);
+      w.addEventListener('dragleave', handleDragLeave);
+      w.addEventListener('drop', handleDrop);
+      w.addEventListener('dragend', handleDragEnd);
+    });
+
+    /* ── LIVE SIMULATED SYSTEM METRICS ── */
+    let cpuPct = 24;
+    function updateSystemDials() {
+      // CPU Fluctuations
+      cpuPct = Math.max(12, Math.min(88, cpuPct + Math.floor(Math.random() * 9) - 4));
+      const gauge = document.getElementById('cpu-gauge');
+      const text = document.getElementById('cpu-text');
+      
+      if(gauge && text) {
+        // Circumference of circular path cx=40 cy=40 r=35 is 2 * PI * 35 = ~220
+        const circumference = 220;
+        const offset = circumference - (cpuPct / 100) * circumference;
+        gauge.style.strokeDashoffset = offset;
+        text.textContent = `${cpuPct}%`;
+      }
+
+      // Memory usage subtle updates
+      const ramUsage = document.getElementById('ram-usage');
+      if(ramUsage) {
+        const ramVal = (5.5 + Math.random() * 0.8).toFixed(1);
+        ramUsage.textContent = `${ramVal} / 16.0 GB`;
+      }
+    }
+    setInterval(updateSystemDials, 2500);
+    setTimeout(updateSystemDials, 500); // Initial fire
+
+    // Simulated log inputs
+    const logContainer = document.getElementById('realtime-logs');
+    const logMessages = [
+      "Active Directory Replication verified [OK]",
+      "DHCP configuration lease renewed for desktop-04",
+      "SMTP Mail queue cleared successfully",
+      "Microsoft 365 license mapping audit [COMPLETED]",
+      "Ubuntu client node heartbeat registered",
+      "IMAP Exchange redirection rule check [STABLE]",
+      "GPO mapping verification check: no anomalies"
+    ];
+    function appendSimulatedLog() {
+      if(!logContainer) return;
+      const now = new Date();
+      const timeStr = `[${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}:${now.getSeconds().toString().padStart(2,'0')}]`;
+      const msg = logMessages[Math.floor(Math.random() * logMessages.length)];
+      
+      const isSuccess = msg.includes("OK") || msg.includes("COMPLETED") || msg.includes("STABLE") || msg.includes("successfully");
+      const statusSpan = isSuccess ? ' <span class="log-success">SUCCESS</span>' : '';
+      
+      const line = document.createElement('div');
+      line.className = 'log-entry';
+      line.innerHTML = `<span class="log-timestamp">${timeStr}</span> <span class="log-text">${msg}</span>${statusSpan}`;
+      
+      logContainer.appendChild(line);
+      logContainer.scrollTop = logContainer.scrollHeight;
+      
+      // Limit logs display stack size
+      if(logContainer.children.length > 6) {
+        logContainer.removeChild(logContainer.children[0]);
+      }
+    }
+    setInterval(appendSimulatedLog, 6000);
+
+    /* ── PHYSICAL RACK SERVER DATA & CLICK HANDLER ── */
+    const rackUnitsData = {
+      switch: {
+        tag: "Unit 04 (1U)",
+        title: "10G Network Switch Router",
+        desc: "Responsible for local routing, hardware configurations, and office network connectivity.",
+        bullets: [
+          "Configured LAN, switches layers, structured cabling, and VLAN partitioning.",
+          "Resolving IP conflict instances, connectivity drops, and wireless coverage extensions.",
+          "Preventative checks on switches and firewalls parameters."
+        ]
+      },
+      exchange: {
+        tag: "Unit 03 (1U)",
+        title: "Microsoft Exchange Migration Server",
+        desc: "Central system managing organizational email transition, directory synchronizations, and mailboxes migrations.",
+        bullets: [
+          "Led organization's domain migration from IMAP servers to Microsoft Exchange Online (.com to .us).",
+          "Managed hybrid configurations, MX records deployment, DNS zone configurations, and user logins provisioning.",
+          "Ensured zero downtime transition across all active business units."
+        ]
+      },
+      ad: {
+        tag: "Unit 02 (2U)",
+        title: "Active Directory Domain Controller",
+        desc: "Core Identity Provider system managing Windows Server 2022 configurations, directories, user credentials, and security policies.",
+        bullets: [
+          "Active Directory user lifecycle: provisioned joins credentials, roles mappings, OUs, and offboarding clearances.",
+          "Configured Group Policy Objects (GPOs) for strict office workstations compliance.",
+          "Integrated local identities directory sync to Microsoft Azure AD / Entra ID."
+        ]
+      },
+      assets: {
+        tag: "Unit 01 (2U)",
+        title: "IT Asset Database Server",
+        desc: "Database node tracking assets inventories allocations, workstations specifications, and support ticketing data.",
+        bullets: [
+          "Maintained full inventory tracking of all computer systems hardware configurations.",
+          "Tracked laptop allocation SOPs, software licensing, and hardware repairs histories for 100+ hardware devices.",
+          "Managed sourcing specifications logs and preventative diagnostics check routines."
+        ]
+      }
+    };
+
+    function selectRackUnit(unitId) {
+      // Highlight selection in rack
+      document.querySelectorAll('.rack-unit').forEach(u => u.classList.remove('active'));
+      const activeUnit = document.getElementById(`rack-${unitId}`);
+      if(activeUnit) activeUnit.classList.add('active');
+
+      // Update Details Panel
+      const emptyState = document.getElementById('rackEmptyState');
+      const content = document.getElementById('rackDisplayContent');
+      const tag = document.getElementById('displayUnitTag');
+      const title = document.getElementById('displayUnitTitle');
+      const desc = document.getElementById('displayUnitDesc');
+      const bulletsList = document.getElementById('displayUnitBullets');
+
+      if(emptyState && content) {
+        emptyState.style.display = 'none';
+        content.style.display = 'block';
+        
+        const data = rackUnitsData[unitId];
+        tag.textContent = data.tag;
+        title.textContent = data.title;
+        desc.textContent = data.desc;
+
+        bulletsList.innerHTML = '';
+        data.bullets.forEach(b => {
+          const li = document.createElement('div');
+          li.className = 'rack-display-bullet-item';
+          li.textContent = b;
+          bulletsList.appendChild(li);
+        });
+      }
+
+      // Automatically print command in console terminal for extra interactivity
+      runTerminalCommand(`systemctl status ${unitId}-server`);
+    }
+
+    /* ── INTERACTIVE MONOPOLY TERMINAL EMULATOR ── */
+    const consoleConsole = document.getElementById('terminalConsole');
+    
+    function writeToTerminal(text, type = 'output') {
+      if(!consoleConsole) return;
+      const line = document.createElement('div');
+      
+      if(type === 'input') {
+        line.className = 'terminal-input-row';
+        line.innerHTML = `<span class="terminal-prompt">guest@pravieen-sysadmin:~$</span> <span style="color:#ffffff">${text}</span>`;
+      } else {
+        line.className = 'terminal-output-line';
+        line.textContent = text;
+      }
+      
+      consoleConsole.appendChild(line);
+      consoleConsole.scrollTop = consoleConsole.scrollHeight;
+    }
+
+    function runTerminalCommand(cmdString) {
+      // Write input first
+      writeToTerminal(cmdString, 'input');
+      
+      const cmd = cmdString.trim().toLowerCase();
+      
+      setTimeout(() => {
+        if(cmd === 'help') {
+          writeToTerminal("Available commands:\n" +
+            "  about      - Display pravieen's bio information\n" +
+            "  skills     - Print technical operational skills overview\n" +
+            "  stats      - Show key server infra metrics\n" +
+            "  ping       - Test network latency to targets (e.g. 'ping mindteck.us')\n" +
+            "  clear      - Clear the terminal console buffer\n" +
+            "  exit       - Reboot/exit interactive terminal session");
+        } 
+        else if(cmd === 'about') {
+          writeToTerminal("pravieen MK — System Administrator based in Bangalore, Karnataka.\n" +
+            "Recognized with the Quarter Champ Award (Q1-2026) by Mindteck India Limited.\n" +
+            "Over a year of enterprise IT experience managing M365, Active Directory, hardware troubleshooting,\n" +
+            "and AV meeting room white-glove executive support services.");
+        }
+        else if(cmd === 'skills') {
+          writeToTerminal("TECHNICAL SKILLS TREE:\n" +
+            "├── Operating Systems: Windows 11 Enterprise, Ubuntu Linux Workstations\n" +
+            "├── Cloud Operations: Microsoft 365 Portal, Exchange Online, SharePoint Admin\n" +
+            "├── Identity Directory: Active Directory, OUs, Group Policy GPOs, User Lifecycle\n" +
+            "└── Networks & hardware: LAN switches, DHCP, Wi-Fi connectivity support, Asset Management");
+        }
+        else if(cmd === 'stats') {
+          writeToTerminal("OPERATIONS METRICS REPORT:\n" +
+            "├── Support Mean Response Time (MRT): 7.3 (Exceeds SLA targets)\n" +
+            "├── Active Directory: 200+ accounts provisioned\n" +
+            "├── Endpoint Management: 200+ workstations supported\n" +
+            "└── Quarter Champ Award: Q1-2026 Recipient");
+        }
+        else if(cmd.startsWith('ping')) {
+          const target = cmd.split(' ')[1] || 'mindteck.us';
+          writeToTerminal(`PING ${target} (104.22.4.192) 56(84) bytes of data.`);
+          
+          let count = 0;
+          const pingInterval = setInterval(() => {
+            if(count >= 3) {
+              clearInterval(pingInterval);
+              writeToTerminal(`--- ${target} ping statistics ---\n3 packets transmitted, 3 received, 0% packet loss, time 2003ms`);
+            } else {
+              const ms = (12 + Math.random() * 8).toFixed(1);
+              writeToTerminal(`64 bytes from ${target}: icmp_seq=${count+1} ttl=56 time=${ms} ms`);
+              count++;
+            }
+          }, 300);
+        }
+        else if(cmd.startsWith('systemctl status')) {
+          const targetServer = cmd.split(' ')[2] || 'ad-server';
+          writeToTerminal(`● ${targetServer}.service - System Administrator inspected server unit\n` +
+            `     Loaded: loaded (/lib/systemd/system/${targetServer}.service; enabled; vendor preset: enabled)\n` +
+            `     Active: active (running) since Wed 2026-07-08 09:00:12 IST; 12h ago\n` +
+            `   Main PID: ${Math.floor(Math.random() * 3000) + 1000} (systemd-sys)\n` +
+            `      Tasks: 8 (limit: 4915)\n` +
+            `     Memory: 2.1G (limit: 16.0G)\n` +
+            `     Status: "Server operational check verified - zero anomalies recorded."`);
+        }
+        else if(cmd === 'clear') {
+          if(consoleConsole) {
+            consoleConsole.innerHTML = '';
+            writeToTerminal("Terminal console cleared. Type 'help' for instructions.");
+          }
+        }
+        else if(cmd === 'exit') {
+          writeToTerminal("Interactive terminal session ended. Type 'help' to connect again.");
+        }
+        else {
+          writeToTerminal(`bash: ${cmd}: command not found. Type 'help' for options.`);
+        }
+      }, 150);
+    }
+
+    // Dynamic keyboard input setup inside terminal
+    writeToTerminal("help"); // Default launch text output trigger
+
+    // Append input line at default bottom trigger
+    const inputRow = document.createElement('div');
+    inputRow.className = 'terminal-input-row';
+    inputRow.innerHTML = `<span class="terminal-prompt">guest@pravieen-sysadmin:~$</span> <input type="text" class="terminal-input" id="term-input" placeholder="Type a command...">`;
+    consoleConsole.appendChild(inputRow);
+    
+    const termInput = document.getElementById('term-input');
+    if(termInput) {
+      termInput.addEventListener('keydown', function(e) {
+        if(e.key === 'Enter') {
+          const val = this.value;
+          this.value = '';
+          
+          // Re-append the typing input line down below dynamically
+          inputRow.remove();
+          
+          runTerminalCommand(val);
+          
+          setTimeout(() => {
+            consoleConsole.appendChild(inputRow);
+            document.getElementById('term-input').focus();
+            consoleConsole.scrollTop = consoleConsole.scrollHeight;
+          }, 350);
+        }
+      });
+    }
+
+    /* ── SCROLL REVEAL TRIGGERS ── */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('in'), i * 60);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    /* ── SKILLS PROGRESS LOADING ON INTERSECTION ── */
+    const skillsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
+            const pct = bar.getAttribute('data-pct');
+            setTimeout(() => bar.style.width = pct, 100);
+          });
+        }
+      });
+    }, { threshold: 0.2 });
+
+    const skillsSection = document.getElementById('skills');
+    if(skillsSection) skillsObserver.observe(skillsSection);
+
+    /* ── SKILLS CARD CATEGORY FILTER ── */
+    function filterSkills(category) {
+      // Toggle active status button styling
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      const activeBtn = event.target;
+      if (activeBtn) activeBtn.classList.add('active');
+
+      const cards = document.querySelectorAll('#skills-grid-container .skill-card');
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (category === 'all' || cat === category) {
+          card.style.display = 'block';
+          setTimeout(() => { card.style.opacity = '1'; card.style.transform = 'scale(1)'; }, 50);
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'scale(0.95)';
+          setTimeout(() => { card.style.display = 'none'; }, 200);
+        }
+      });
+    }
+
+    /* ── FORM HANDLING REDIRECTION ── */
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const statusDiv = document.getElementById('contactFormStatus');
+      const name = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const message = document.getElementById('contact-message').value.trim();
+
+      if (!name || !email || !message) {
+        statusDiv.className = 'form-status error';
+        statusDiv.textContent = 'Please complete all required fields.';
+        return;
+      }
+
+      // Output status and redirect client to pre-filled WhatsApp link for active engagement
+      statusDiv.className = 'form-status success';
+      statusDiv.textContent = '✓ Submitting message! Opening WhatsApp for instant delivery...';
+
+      const whatsappNumber = '919500932816';
+      const parsedText = `Hi pravieen, my name is ${name} (${email}).\n\nInquiry:\n${message}`;
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(parsedText)}`;
+
+      setTimeout(() => {
+        window.open(whatsappUrl, '_blank');
+        document.getElementById('portfolioContactForm').reset();
+        setTimeout(() => { statusDiv.style.display = 'none'; }, 5000);
+      }, 1000);
+    }
+
+    /* ── CMS INLINE DEVELOPER EDIT MODE ── */
+    let devEditModeActive = false;
+
+    function toggleEditMode() {
+      devEditModeActive = !devEditModeActive;
+      const toolbar = document.getElementById('edit-toolbar');
+      
+      document.querySelectorAll('[contenteditable]').forEach(el => {
+        el.setAttribute('contenteditable', devEditModeActive ? 'true' : 'false');
+      });
+
+      document.body.classList.toggle('edit-mode', devEditModeActive);
+      toolbar.classList.toggle('visible', devEditModeActive);
+    }
+
+    // Capture Ctrl + S keyboard saves
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && e.key === 's') {
+        e.preventDefault();
+        
+        // Temporarily clear out state toggles so clean code stores
+        const isEditActive = devEditModeActive;
+        if(isEditActive) toggleEditMode();
+        
+        const markup = document.documentElement.outerHTML;
+        const blob = new Blob([markup], { type: 'text/html' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'index.html'; // Save as downloads target index.html
+        a.click();
+        
+        // Re-enable if was previously on
+        if(isEditActive) toggleEditMode();
+
+        // Reveal beautiful saved badge
+        const badge = document.getElementById('saveBadge');
+        if(badge) {
+          badge.classList.add('visible');
+          setTimeout(() => { badge.classList.remove('visible'); }, 3000);
+        }
+      }
+    });
+
+    // Site Header Scrolled Style Shift
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('site-header');
+      if (window.scrollY > 40) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+      
+      // Auto highlight active nav link
+      let currentSection = '';
+      document.querySelectorAll('section, #hero').forEach(sec => {
+        const top = sec.offsetTop - 120;
+        if(window.scrollY >= top) {
+          currentSection = sec.id;
+        }
+      });
+
+      document.querySelectorAll('.nav-links a').forEach(a => {
+        a.classList.remove('active');
+        if(a.getAttribute('href') === `#${currentSection}`) {
+          a.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
