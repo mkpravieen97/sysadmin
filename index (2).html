@@ -1,0 +1,3259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M. K. Pravieen | System Administrator | Cloud & DevOps</title>
+  <meta name="description" content="Portfolio of M. K. Pravieen, System Administrator in Bengaluru supporting a global fleet of 200+ users and endpoints. Windows 11, Active Directory, Microsoft 365, AWS, Azure, Linux & DevOps.">
+  <meta name="keywords" content="M K Pravieen, System Administrator, Cloud Administrator, Azure, AWS, Linux, Microsoft 365, Active Directory, Intune, WSUS, DevOps, KarolGrove, Bengaluru">
+  <meta name="author" content="M. K. Pravieen">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="M. K. Pravieen | System Administrator | Cloud & DevOps">
+  <meta property="og:description" content="Supporting 200+ enterprise endpoints, Windows 11, Active Directory, M365, AWS & Azure. Quarter Champ Awardee (Q1 2026).">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0284c7">
+
+  <!-- Dynamic SVG Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%230284c7'/%3E%3Cstop offset='100%25' stop-color='%230ea5e9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='28' fill='%23f0f9ff'/%3E%3Cpath d='M50 18 L82 36 L82 68 L50 86 L18 68 L18 36 Z' fill='none' stroke='url(%23g)' stroke-width='6'/%3E%3Cpath d='M50 32 L70 44 L50 56 L30 44 Z' fill='%230284c7' opacity='0.85'/%3E%3Cpath d='M50 56 L50 78' stroke='%230284c7' stroke-width='5'/%3E%3Ctext x='50' y='64' font-size='22' font-weight='900' text-anchor='middle' fill='%23ffffff' font-family='monospace'%3EMP%3C/text%3E%3C/svg%3E">
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "M. K. Pravieen",
+    "jobTitle": "System Administrator",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Mindteck India Limited"
+    },
+    "email": "mailto:mkpravieen97@gmail.com",
+    "telephone": "+919500932816",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "addressCountry": "IN"
+    },
+    "url": "https://mkpravieen97.github.io/sysadmin",
+    "sameAs": [
+      "https://www.linkedin.com/in/mk-pravieen"
+    ],
+    "knowsAbout": [
+      "System Administration",
+      "Microsoft 365 Administration",
+      "Active Directory & Microsoft Entra ID",
+      "Windows 11 Enterprise & WSUS Patching",
+      "Microsoft Intune & Endpoint Management",
+      "Cloud Infrastructure (AWS & Azure)",
+      "Linux Administration",
+      "DevOps Fundamentals & Git CI/CD Automation",
+      "Web Deployment & DNS Management (karolgrove.com)"
+    ]
+  }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       CLEAN EXECUTIVE 3D WHITE SYSTEM VARIABLES
+       ========================================================================== */
+    :root {
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-display: 'Space Grotesk', var(--font-sans);
+      --font-mono: 'JetBrains Mono', monospace;
+
+      /* Surfaces & Backgrounds */
+      --bg-base: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-card: #ffffff;
+      --bg-subtle: #f1f5f9;
+      --bg-glass: rgba(255, 255, 255, 0.95);
+
+      /* Crisp Borders */
+      --border-subtle: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --border-accent: rgba(2, 132, 199, 0.4);
+      --border-hover: #0284c7;
+
+      /* High-Contrast Typography */
+      --text-main: #0f172a;       /* Deep Slate Navy for bold headings */
+      --text-body: #334155;       /* Slate 700 for comfortable long reading */
+      --text-muted: #475569;      /* Slate 600 for descriptions */
+      --text-dim: #64748b;        /* Slate 500 for micro-labels */
+
+      /* Vibrant Tech Accents */
+      --accent-primary: #0284c7;  /* Sky 600 */
+      --accent-dark: #0369a1;     /* Sky 700 */
+      --accent-light: #e0f2fe;    /* Sky 100 */
+      --accent-gradient: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+
+      --emerald-neon: #059669;
+      --emerald-light: #d1fae5;
+      --amber-gold: #d97706;
+      --amber-light: #fef3c7;
+      --amber-gradient: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+
+      /* Refined 3D Shadows */
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+      --shadow-card: 0 4px 20px -3px rgba(15, 23, 42, 0.06), 0 2px 6px -2px rgba(15, 23, 42, 0.03);
+      --shadow-hover: 0 18px 36px -8px rgba(2, 132, 199, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.06);
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --radius-pill: 9999px;
+
+      --transition-3d: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    /* ==========================================================================
+       RESET & BASE SETUP
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-body);
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      overflow-x: hidden;
+      perspective: 1400px;
+      position: relative;
+    }
+
+    /* Ambient soft background lighting */
+    body::before {
+      content: "";
+      position: fixed;
+      top: -20%;
+      left: -10%;
+      width: 55vw;
+      height: 55vw;
+      background: radial-gradient(circle, rgba(2, 132, 199, 0.04) 0%, rgba(37, 99, 235, 0.02) 40%, transparent 70%);
+      pointer-events: none;
+      z-index: -2;
+      filter: blur(80px);
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      bottom: -15%;
+      right: -10%;
+      width: 50vw;
+      height: 50vw;
+      background: radial-gradient(circle, rgba(217, 119, 6, 0.03) 0%, rgba(5, 150, 105, 0.02) 40%, transparent 70%);
+      pointer-events: none;
+      z-index: -2;
+      filter: blur(80px);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 1.75rem;
+    }
+
+    /* Skip link */
+    .skip-to-content {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      background: var(--text-main);
+      color: #ffffff;
+      padding: 0.75rem 1.5rem;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      z-index: 9999;
+      transition: top 0.2s;
+    }
+    .skip-to-content:focus { top: 1rem; }
+
+    /* ==========================================================================
+       HEADER & NAVIGATION (PERFECT HORIZONTAL & VERTICAL ALIGNMENT)
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 1rem;
+      z-index: 1000;
+      width: 100%;
+      padding: 0 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .nav-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      height: 64px;
+      background: var(--bg-glass);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.25rem;
+      transition: var(--transition-3d);
+    }
+
+    .nav-inner:hover {
+      border-color: var(--border-strong);
+      box-shadow: 0 15px 35px -8px rgba(15, 23, 42, 0.12);
+    }
+
+    /* Brand Block */
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .brand-cube {
+      width: 38px;
+      height: 38px;
+      background: var(--accent-gradient);
+      border-radius: var(--radius-md);
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 0.95rem;
+      font-family: var(--font-mono);
+      box-shadow: 0 3px 10px rgba(2, 132, 199, 0.3);
+      flex-shrink: 0;
+    }
+
+    .brand-meta {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1.15;
+    }
+
+    .brand-name {
+      font-weight: 800;
+      font-size: 0.98rem;
+      letter-spacing: -0.015em;
+      color: var(--text-main);
+    }
+
+    .brand-role-status {
+      font-size: 0.72rem;
+      color: var(--accent-dark);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-top: 2px;
+    }
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--emerald-neon);
+      box-shadow: 0 0 8px var(--emerald-neon);
+      animation: pulse-ring 2s infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulse-ring {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    /* Centered Single-Line Navigation Links */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 0.2rem;
+      margin: 0;
+      padding: 0;
+      flex-shrink: 1;
+    }
+
+    .nav-links a {
+      height: 36px;
+      padding: 0 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      border-radius: var(--radius-pill);
+      white-space: nowrap;
+      line-height: 1;
+      transition: all 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+      background: var(--bg-subtle);
+    }
+
+    .nav-links a.active {
+      color: var(--accent-dark);
+      background: var(--accent-light);
+      font-weight: 700;
+    }
+
+    /* Header Actions */
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .btn-contact-dock {
+      height: 38px;
+      padding: 0 1.25rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      background: var(--accent-gradient);
+      color: #ffffff;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+      font-size: 0.86rem;
+      white-space: nowrap;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-contact-dock:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(2, 132, 199, 0.35);
+    }
+
+    .mobile-toggle {
+      display: none;
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ==========================================================================
+       HERO: 3D INFRASTRUCTURE COMMAND STAGE
+       ========================================================================== */
+    .hero-section {
+      padding: 2.5rem 0 5rem;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .cyber-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-subtle);
+      padding: 0.45rem 1.1rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.3rem, 4.4vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.14;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.35rem;
+      color: var(--text-main);
+    }
+
+    .gradient-text {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .hero-desc {
+      font-size: 1.12rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      max-width: 38rem;
+    }
+
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-bottom: 2.3rem;
+    }
+
+    .hero-pill {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-body);
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-pill svg { color: var(--accent-primary); }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn-3d-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: var(--accent-gradient);
+      color: #ffffff;
+      padding: 0.85rem 1.75rem;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 18px rgba(2, 132, 199, 0.28);
+      transition: all 0.25s ease;
+    }
+
+    .btn-3d-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(2, 132, 199, 0.35);
+    }
+
+    .btn-3d-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 0.85rem 1.65rem;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+    }
+
+    .btn-3d-secondary:hover {
+      border-color: var(--border-hover);
+      background: var(--bg-subtle);
+      transform: translateY(-2px);
+    }
+
+    /* 3D Architecture Canvas Stage (Right Side) */
+    .stage-3d-wrapper {
+      position: relative;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-card);
+      transform-style: preserve-3d;
+      transition: border-color 0.3s;
+    }
+
+    .stage-3d-wrapper:hover {
+      border-color: var(--border-hover);
+    }
+
+    .stage-top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 0.85rem;
+      margin-bottom: 0.85rem;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    /* Architecture Dual-Mode Toggle Group */
+    .arch-toggle-group {
+      display: inline-flex;
+      background: var(--bg-subtle);
+      padding: 0.25rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-subtle);
+      gap: 0.25rem;
+    }
+
+    .arch-tab-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.42rem 0.95rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      font-family: var(--font-sans);
+      color: var(--text-muted);
+      border-radius: var(--radius-pill);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .arch-tab-btn svg {
+      color: inherit;
+    }
+
+    .arch-tab-btn:hover {
+      color: var(--text-main);
+    }
+
+    .arch-tab-btn.active {
+      background: #ffffff;
+      color: var(--accent-dark);
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+      font-weight: 800;
+    }
+
+    .drag-hint {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.72rem;
+      font-family: var(--font-mono);
+      color: var(--text-dim);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .canvas-container {
+      position: relative;
+      width: 100%;
+      height: 440px;
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at 50% 45%, rgba(240, 249, 255, 0.8) 0%, rgba(248, 250, 252, 0.98) 75%);
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      cursor: grab;
+      user-select: none;
+    }
+
+    .canvas-container:active { cursor: grabbing; }
+
+    #infraCanvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* Node Inspector Pill */
+    .node-inspector {
+      position: absolute;
+      top: 0.85rem;
+      left: 0.85rem;
+      right: 0.85rem;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.45rem 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+      pointer-events: none;
+      transition: all 0.25s ease;
+      z-index: 5;
+    }
+
+    .inspector-badge {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 800;
+      color: #ffffff;
+      background: var(--accent-gradient);
+      padding: 0.2rem 0.55rem;
+      border-radius: var(--radius-sm);
+      letter-spacing: 0.03em;
+      flex-shrink: 0;
+      text-transform: uppercase;
+    }
+
+    .inspector-text {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-main);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* HUD overlay */
+    .hud-overlay {
+      position: absolute;
+      bottom: 0.85rem;
+      left: 0.85rem;
+      right: 0.85rem;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.65rem 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: var(--text-main);
+      box-shadow: var(--shadow-sm);
+      z-index: 5;
+    }
+
+    .hud-stats-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hud-stat {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      white-space: nowrap;
+    }
+
+    .hud-stat strong { color: var(--accent-dark); font-weight: 700; }
+
+    .btn-hud-action {
+      background: var(--accent-gradient);
+      color: #ffffff;
+      font-weight: 700;
+      padding: 0.4rem 0.95rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.25);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .btn-hud-action:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+    }
+
+    /* ==========================================================================
+       KEY 3D METRIC STRIP
+       ========================================================================== */
+    .metrics-section {
+      padding: 1.5rem 0 4.5rem;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .tilt-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.75rem;
+      box-shadow: var(--shadow-card);
+      transform-style: preserve-3d;
+      transition: var(--transition-3d);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tilt-card:hover {
+      transform: perspective(1000px) translateY(-6px);
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .tilt-card-badge {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      display: grid;
+      place-items: center;
+      margin-bottom: 1.35rem;
+    }
+
+    .tilt-card:nth-child(2) .tilt-card-badge {
+      background: var(--amber-light);
+      color: var(--amber-gold);
+    }
+
+    .tilt-card:nth-child(3) .tilt-card-badge {
+      background: var(--emerald-light);
+      color: var(--emerald-neon);
+    }
+
+    .tilt-card:nth-child(4) .tilt-card-badge {
+      background: #eff6ff;
+      color: #2563eb;
+    }
+
+    .metric-number {
+      font-family: var(--font-display);
+      font-size: 2.6rem;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+      color: var(--text-main);
+    }
+
+    .metric-label {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.35rem;
+    }
+
+    .metric-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       SECTION HEADINGS
+       ========================================================================== */
+    .section-head {
+      text-align: center;
+      max-width: 50rem;
+      margin: 0 auto 3.5rem;
+    }
+
+    .section-kicker {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-dark);
+      margin-bottom: 0.75rem;
+      display: inline-block;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.4vw, 2.7rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.18;
+      margin-bottom: 1rem;
+      color: var(--text-main);
+    }
+
+    .section-subtitle {
+      font-size: 1.08rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ==========================================================================
+       FEATURED PROJECTS SECTION (INCLUDING KAROLGROVE.COM AI + GIT AUTO-SYNC)
+       ========================================================================== */
+    .projects-section {
+      padding: 4.5rem 0;
+    }
+
+    .projects-grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    /* Primary Star Project: KarolGrove */
+    .project-hero-card {
+      background: var(--bg-surface);
+      border: 1.5px solid #bae6fd;
+      border-radius: var(--radius-xl);
+      padding: 2.75rem;
+      box-shadow: 0 10px 35px -10px rgba(2, 132, 199, 0.12);
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition-3d);
+    }
+
+    .project-hero-card:hover {
+      border-color: var(--border-hover);
+      box-shadow: 0 20px 45px -12px rgba(2, 132, 199, 0.18);
+    }
+
+    .project-star-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: 1rem;
+      border: 1px solid rgba(2, 132, 199, 0.25);
+    }
+
+    .project-title {
+      font-family: var(--font-display);
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.25;
+      margin-bottom: 0.85rem;
+    }
+
+    .project-pitch {
+      font-size: 1.02rem;
+      color: var(--text-body);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-features-list {
+      list-style: none;
+      display: grid;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .project-features-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: var(--text-body);
+    }
+
+    .project-features-list li strong {
+      color: var(--text-main);
+    }
+
+    .project-features-list li svg {
+      color: var(--accent-primary);
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+
+    .project-links-bar {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-live-project {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--accent-gradient);
+      color: #ffffff;
+      padding: 0.75rem 1.6rem;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+      font-size: 0.92rem;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .btn-live-project:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(2, 132, 199, 0.35);
+    }
+
+    .btn-git-code {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--bg-subtle);
+      border: 1.5px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+      font-size: 0.92rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-git-code:hover {
+      border-color: var(--border-hover);
+      background: #ffffff;
+    }
+
+    /* 3D Blueprint Visual Docket for KarolGrove */
+    .project-blueprint-box {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .blueprint-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .bp-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+    }
+
+    .bp-val {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .bp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.25rem;
+    }
+
+    .bp-tag {
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-sm);
+      color: var(--accent-dark);
+      font-weight: 600;
+    }
+
+    /* Secondary Projects 3-Column Grid */
+    .sub-projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .sub-project-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.85rem;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition-3d);
+    }
+
+    .sub-project-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .sub-p-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .sub-p-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      display: grid;
+      place-items: center;
+    }
+
+    .sub-p-badge {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--emerald-neon);
+      background: var(--emerald-light);
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-pill);
+    }
+
+    .sub-p-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+    }
+
+    .sub-p-desc {
+      font-size: 0.88rem;
+      color: var(--text-body);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    .sub-p-tags {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    /* ==========================================================================
+       INTERACTIVE OPERATIONS TERMINAL (LIVE IT TELEMETRY)
+       ========================================================================== */
+    .terminal-section {
+      padding: 4.5rem 0;
+    }
+
+    .terminal-console {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: 0 20px 45px -15px rgba(15, 23, 42, 0.2);
+    }
+
+    .terminal-topbar {
+      background: #1e293b;
+      padding: 0.85rem 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .terminal-dots {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    .dot.red { background: #ef4444; }
+    .dot.yellow { background: #f59e0b; }
+    .dot.green { background: #10b981; }
+
+    .terminal-title {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: #94a3b8;
+      font-weight: 600;
+    }
+
+    .terminal-nav {
+      display: flex;
+      background: #0f172a;
+      border-bottom: 1px solid #334155;
+      overflow-x: auto;
+    }
+
+    .term-tab-btn {
+      padding: 0.9rem 1.4rem;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #94a3b8;
+      border-right: 1px solid #334155;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .term-tab-btn:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: #ffffff;
+    }
+
+    .term-tab-btn.active {
+      background: rgba(2, 132, 199, 0.2);
+      color: #38bdf8;
+      border-bottom: 2px solid #38bdf8;
+    }
+
+    .terminal-body {
+      padding: 2.2rem;
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .term-left {
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+
+    .code-prompt {
+      color: #34d399;
+      font-weight: 700;
+    }
+
+    .code-cmd {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .code-output {
+      color: #94a3b8;
+      margin-top: 0.75rem;
+      padding-left: 1rem;
+      border-left: 2px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .code-success {
+      color: #38bdf8;
+      font-weight: 700;
+    }
+
+    .term-right {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+    }
+
+    .term-right-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+
+    .term-right-desc {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    .term-spec-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.82rem;
+    }
+
+    .term-spec-label { color: #64748b; }
+    .term-spec-val { font-weight: 700; color: #38bdf8; font-family: var(--font-mono); }
+
+    /* ==========================================================================
+       TECHNICAL SKILLS & TOOLKIT MATRIX
+       ========================================================================== */
+    .skills-section {
+      padding: 4.5rem 0;
+    }
+
+    .skills-3d-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem;
+    }
+
+    .skill-3d-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 2.2rem;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition-3d);
+    }
+
+    .skill-3d-card:hover {
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .skill-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-icon-3d {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      display: grid;
+      place-items: center;
+    }
+
+    .skill-cat-title {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .skill-cat-sub {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      font-weight: 600;
+    }
+
+    .skill-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-chip {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-subtle);
+      padding: 0.4rem 0.85rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-body);
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: all 0.2s ease;
+    }
+
+    .skill-chip:hover {
+      border-color: var(--border-hover);
+      background: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .chip-level {
+      font-size: 0.68rem;
+      font-family: var(--font-mono);
+      padding: 0.12rem 0.45rem;
+      border-radius: var(--radius-pill);
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       PROFESSIONAL EXPERIENCE & ACHIEVEMENTS TIMELINE
+       ========================================================================== */
+    .experience-section {
+      padding: 4.5rem 0;
+    }
+
+    .exp-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      gap: 2.5rem;
+    }
+
+    .exp-3d-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      transition: var(--transition-3d);
+    }
+
+    .exp-3d-card:hover {
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .exp-role-name {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .exp-company-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      margin-top: 0.25rem;
+    }
+
+    .exp-duration {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 700;
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      border: 1px solid rgba(2, 132, 199, 0.25);
+      padding: 0.35rem 0.95rem;
+      border-radius: var(--radius-pill);
+    }
+
+    .exp-summary-text {
+      font-size: 1rem;
+      color: var(--text-body);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .exp-responsibilities {
+      list-style: none;
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .exp-responsibilities li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--text-body);
+    }
+
+    .exp-responsibilities li svg {
+      color: var(--accent-primary);
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    .exp-responsibilities li strong {
+      color: var(--text-main);
+    }
+
+    /* Trophy Card */
+    .trophy-banner {
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      border: 1.5px solid #fde68a;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.75rem;
+      margin-top: 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .trophy-icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-md);
+      background: var(--amber-gradient);
+      color: #ffffff;
+      display: grid;
+      place-items: center;
+      font-size: 1.6rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    }
+
+    .trophy-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #b45309;
+    }
+
+    .trophy-desc {
+      font-size: 0.88rem;
+      color: var(--text-body);
+      margin-top: 0.2rem;
+    }
+
+    /* ==========================================================================
+       CERTIFICATIONS & ROADMAP
+       ========================================================================== */
+    .cert-section {
+      padding: 4.5rem 0;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .cert-3d-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.75rem;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition-3d);
+    }
+
+    .cert-3d-box:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .cert-status-pill {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-pill);
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .cert-status-pill.done {
+      background: var(--emerald-light);
+      color: var(--emerald-neon);
+      border: 1px solid rgba(5, 150, 105, 0.3);
+    }
+
+    .cert-status-pill.progress {
+      background: var(--amber-light);
+      color: var(--amber-gold);
+      border: 1px solid rgba(217, 119, 6, 0.3);
+    }
+
+    .cert-status-pill.planned {
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      border: 1px solid rgba(2, 132, 199, 0.3);
+    }
+
+    .cert-name {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 0.35rem;
+      color: var(--text-main);
+    }
+
+    .cert-issuer {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Education Banner */
+    .edu-banner {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem 2rem;
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      box-shadow: var(--shadow-card);
+    }
+
+    .edu-left {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .edu-icon-badge {
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius-md);
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      display: grid;
+      place-items: center;
+      font-size: 1.5rem;
+    }
+
+    .edu-degree {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .edu-college {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* ==========================================================================
+       RECRUITER CONTACT HUB
+       ========================================================================== */
+    .contact-section {
+      padding: 5rem 0 6rem;
+    }
+
+    .contact-3d-console {
+      background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+      border: 1.5px solid #bae6fd;
+      border-radius: var(--radius-xl);
+      padding: 4rem 3rem;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 1.25rem;
+      color: var(--text-main);
+    }
+
+    .contact-desc {
+      font-size: 1.12rem;
+      color: var(--text-muted);
+      max-width: 40rem;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+
+    .contact-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-subtle);
+      padding: 0.85rem 1.6rem;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+    }
+
+    .contact-btn:hover {
+      border-color: var(--border-hover);
+      background: var(--bg-subtle);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .contact-btn.primary {
+      background: var(--accent-gradient);
+      color: #ffffff;
+      border-color: transparent;
+      box-shadow: 0 4px 18px rgba(2, 132, 199, 0.25);
+    }
+
+    /* Toast Notification */
+    .toast-msg {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--text-main);
+      color: #ffffff;
+      padding: 0.85rem 1.5rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.92rem;
+      font-weight: 700;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.25);
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      z-index: 9999;
+      transform: translateY(100px);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .toast-msg.show {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 2.2rem 0;
+      font-size: 0.88rem;
+      color: var(--text-dim);
+      text-align: center;
+      background: #ffffff;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 1080px) {
+      .nav-links a { padding: 0 0.55rem; font-size: 0.82rem; }
+      .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .project-hero-card { grid-template-columns: 1fr; gap: 2rem; }
+      .sub-projects-grid { grid-template-columns: 1fr; }
+      .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+      .skills-3d-grid { grid-template-columns: 1fr; }
+      .terminal-body { grid-template-columns: 1fr; }
+      .cert-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 860px) {
+      .nav-links { display: none; }
+      .mobile-toggle { display: flex; }
+      .metrics-grid { grid-template-columns: 1fr; }
+      .contact-3d-console { padding: 3rem 1.5rem; }
+      .contact-actions { flex-direction: column; }
+      .contact-btn { width: 100%; justify-content: center; }
+    }
+
+    /* Mobile Drawer */
+    .mobile-drawer {
+      display: none;
+      position: fixed;
+      top: 80px;
+      left: 1rem; right: 1rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem;
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+      z-index: 999;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .mobile-drawer.open { display: flex; }
+    .mobile-drawer a {
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      color: var(--text-body);
+    }
+    .mobile-drawer a:hover {
+      background: var(--bg-subtle);
+      color: var(--text-main);
+    }
+
+    /* ==========================================================================
+       PRINT STYLESHEET
+       ========================================================================== */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+        font-size: 11pt;
+      }
+      .site-header, .canvas-container, .hud-overlay, .btn-contact-dock,
+      .contact-section, .toast-msg, .btn-hud-action { display: none !important; }
+      .container { max-width: 100% !important; padding: 0 !important; }
+      .hero-grid { grid-template-columns: 1fr !important; }
+      .tilt-card, .exp-3d-card, .skill-3d-card, .cert-3d-box, .terminal-console, .project-hero-card, .sub-project-card {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+        color: #0f172a !important;
+        page-break-inside: avoid;
+      }
+      .gradient-text { -webkit-text-fill-color: #0f172a !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Floating Navigation Dock (Aligned Centerline) -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <div class="brand-cube">MP</div>
+        <div class="brand-meta">
+          <span class="brand-name">M. K. Pravieen</span>
+          <span class="brand-role-status">
+            <span class="pulse-dot"></span>
+            System Admin • Mindteck
+          </span>
+        </div>
+      </div>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#overview" class="active">Overview</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#telemetry">Live Ops</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#certifications">Roadmap</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn-contact-dock">
+          <span>Get in Touch</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <a href="#overview">Overview</a>
+      <a href="#projects">Projects</a>
+      <a href="#telemetry">Live Ops</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#certifications">Roadmap</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ==========================================================================
+         HERO SECTION: 3D CYBERNETIC COMMAND STAGE
+         ========================================================================== -->
+    <section id="overview" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Column: Executive Summary & Punchy Mission -->
+          <div>
+            <div class="cyber-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              <span>System Administrator • Global Fleet Specialist</span>
+            </div>
+
+            <h1 class="hero-title">
+              Engineering <span class="gradient-text">Zero-Downtime</span> IT Infrastructure & Hybrid Cloud.
+            </h1>
+
+            <p class="hero-desc">
+              I administer <strong>200+ global users and endpoints</strong> at Mindteck India Ltd. From Active Directory provisioning, Microsoft 365 governance, and WSUS patch cycles to AI-driven web architectures, automated Git CI/CD pipelines, and cloud operations.
+            </p>
+
+            <div class="hero-pills">
+              <span class="hero-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                200+ Endpoints Managed
+              </span>
+              <span class="hero-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                Quarter Champ Awardee (Q1 2026)
+              </span>
+              <span class="hero-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                7.3 Mean Response Time (MRT)
+              </span>
+              <span class="hero-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                Zero-Loss Email Migration
+              </span>
+            </div>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn-3d-primary">
+                <span>View Featured Projects</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+
+              <a href="MK_Pravieen_Resume.pdf" download class="btn-3d-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Download Resume</span>
+              </a>
+
+              <button class="btn-3d-secondary" onclick="window.print()" title="Print Resume">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                <span>Print</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive 3D Architecture Engine (Dual-Mode: IT & M365 / DevOps) -->
+          <div>
+            <div class="stage-3d-wrapper" id="stageWrapper">
+              <div class="stage-top-bar">
+                <div class="arch-toggle-group" role="tablist" aria-label="Architecture View Selection">
+                  <button class="arch-tab-btn active" id="tabItInfra" onclick="switchArchMode('it')" role="tab" aria-selected="true" title="View Enterprise IT & Microsoft 365 Architecture">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    <span>3D IT & M365 Infrastructure</span>
+                  </button>
+                  <button class="arch-tab-btn" id="tabDevOps" onclick="switchArchMode('devops')" role="tab" aria-selected="false" title="View Modern DevOps & Cloud Architecture">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                    <span>3D DevOps Architecture</span>
+                  </button>
+                </div>
+                <div class="drag-hint">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8M8 12h8"></path></svg>
+                  <span>DRAG TO ROTATE 3D</span>
+                </div>
+              </div>
+
+              <div class="canvas-container" id="canvasBox">
+                <!-- Real-Time Interactive Node Inspector Bar -->
+                <div class="node-inspector" id="nodeInspector">
+                  <span class="inspector-badge" id="inspectorBadge">M365 CLOUD</span>
+                  <span class="inspector-text" id="inspectorText">Hover or click any 3D node to inspect architecture specifications</span>
+                </div>
+
+                <canvas id="infraCanvas"></canvas>
+
+                <!-- Dynamic HUD Overlay -->
+                <div class="hud-overlay" id="hudOverlay">
+                  <div class="hud-stats-group" id="hudStatsGroup">
+                    <!-- Populated dynamically via JS -->
+                  </div>
+                  <button class="btn-hud-action" id="triggerActionBtn">Simulate M365 Sync</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       KEY 3D METRIC STRIP
+       ========================================================================== -->
+    <section class="metrics-section">
+      <div class="container">
+        <div class="metrics-grid">
+          <!-- Metric 1: 200+ Endpoints -->
+          <div class="tilt-card">
+            <div class="tilt-card-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <div class="metric-number">200+</div>
+            <div class="metric-label">Managed Endpoints</div>
+            <div class="metric-desc">Complete lifecycle governance: imaging, WSUS security patch management, BitLocker encryption, hardware diagnostics & lifecycle audits.</div>
+          </div>
+
+          <!-- Metric 2: Quarter Champ Q1 2026 -->
+          <div class="tilt-card">
+            <div class="tilt-card-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+            </div>
+            <div class="metric-number">Q1 '26</div>
+            <div class="metric-label">Quarter Champ Award</div>
+            <div class="metric-desc">Conferred by Mindteck India Limited for exceptional execution in desktop support, infrastructure availability, and proactive issue resolution.</div>
+          </div>
+
+          <!-- Metric 3: Zero Data Loss Migration -->
+          <div class="tilt-card">
+            <div class="tilt-card-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div class="metric-number">0 Loss</div>
+            <div class="metric-label">Company Email Migration</div>
+            <div class="metric-desc">Created 200+ Active Directory accounts and deployed configured endpoints on schedule with 100% data integrity and zero business downtime.</div>
+          </div>
+
+          <!-- Metric 4: 7.3 Mean Response Time -->
+          <div class="tilt-card">
+            <div class="tilt-card-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div class="metric-number">7.3m</div>
+            <div class="metric-label">Mean Response Time (MRT)</div>
+            <div class="metric-desc">Rapid turnaround across Ivanti ticketing systems, restoring DNS, DHCP, VPN, and connectivity for executive and global users.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       FEATURED PROJECTS & ENGINEERING LABS (INCLUDING KAROLGROVE.COM)
+       ========================================================================== -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Production Work & Cloud Engineering</span>
+          <h2 class="section-title">Featured Engineering Projects</h2>
+          <p class="section-subtitle">Demonstrating modern infrastructure orchestration, automated CI/CD synchronization, AI-augmented engineering, and large-scale enterprise migrations.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Featured Star Project: KarolGrove.com -->
+          <div class="project-hero-card">
+            <div>
+              <div class="project-star-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <span>FEATURED CLOUD & AI DEPLOYMENT • LIVE PRODUCTION</span>
+              </div>
+
+              <h3 class="project-title">KarolGrove.com — AI-Engineered Web Platform with Git Auto-Sync CI/CD</h3>
+              <p class="project-pitch">
+                Engineered and launched an entire modern e-commerce web platform completely built using AI assistance. Bootstrapped with a <strong>$0 infrastructure cost launch model</strong> through automated Git CI/CD deployment, followed by custom domain acquisition, production DNS mapping, and live global edge serving.
+              </p>
+
+              <ul class="project-features-list">
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>AI-Assisted Architecture:</strong> Conceptualized, generated, and refined full-stack frontend architecture, product catalogs, and responsive UX purely through advanced AI prompt engineering.</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Git Auto-Sync CI/CD Pipeline:</strong> Automated continuous deployment where code and catalog commits pushed to the Git repository automatically synchronize and rebuild to live edge servers within seconds.</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Zero-Cost Bootstrapped Launch:</strong> Leveraged serverless edge hosting and static distribution to launch to production at zero initial hosting overhead.</span>
+                </li>
+                <li>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Custom Domain & DNS Routing:</strong> Procured the commercial custom domain <strong>karolgrove.com</strong>, configured Apex A-records, CNAME redirects, SSL/TLS certificates, and edge caching for high reliability.</span>
+                </li>
+              </ul>
+
+              <div class="project-links-bar">
+                <a href="https://karolgrove.com" target="_blank" rel="noopener noreferrer" class="btn-live-project">
+                  <span>Visit karolgrove.com</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://github.com/mkpravieen97" target="_blank" rel="noopener noreferrer" class="btn-git-code">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>Git Repository</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Technical Architecture Breakdown -->
+            <div class="project-blueprint-box">
+              <div class="blueprint-row">
+                <span class="bp-label">Production Domain</span>
+                <span class="bp-val" style="color:var(--accent-dark);font-family:var(--font-mono);">karolgrove.com (HTTPS)</span>
+              </div>
+              <div class="blueprint-row">
+                <span class="bp-label">Deployment Architecture</span>
+                <span class="bp-val">Automated Git CI/CD Auto-Sync</span>
+              </div>
+              <div class="blueprint-row">
+                <span class="bp-label">Initial Launch Cost</span>
+                <span class="bp-val" style="color:var(--emerald-neon);">$0.00 (Zero-Cost Serverless Edge)</span>
+              </div>
+              <div class="blueprint-row">
+                <span class="bp-label">DNS & Security Configuration</span>
+                <span class="bp-val">Apex A-Record • CNAME • Auto SSL/TLS</span>
+              </div>
+              <div class="blueprint-row">
+                <span class="bp-label">Tooling & Environment</span>
+                <div class="bp-tags">
+                  <span class="bp-tag">AI Workflows</span>
+                  <span class="bp-tag">Git Auto-Sync</span>
+                  <span class="bp-tag">DNS Management</span>
+                  <span class="bp-tag">SSL Encryption</span>
+                  <span class="bp-tag">Serverless CDN</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Engineering Projects (3-Column Grid) -->
+          <div class="sub-projects-grid">
+            <!-- Project 02: 200+ Email Migration -->
+            <div class="sub-project-card">
+              <div class="sub-p-header">
+                <div class="sub-p-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <span class="sub-p-badge">Zero Data Loss</span>
+              </div>
+              <h4 class="sub-p-title">200+ Account Email & AD Migration</h4>
+              <p class="sub-p-desc">
+                Orchestrated the creation of 200+ Active Directory accounts and allocated configured endpoints for a company-wide migration at Mindteck. Delivered on schedule with zero data loss, earning the Quarter Champ Award.
+              </p>
+              <div class="sub-p-tags">
+                <span class="bp-tag">Active Directory</span>
+                <span class="bp-tag">Exchange Online</span>
+                <span class="bp-tag">1.84 TB Data</span>
+              </div>
+            </div>
+
+            <!-- Project 03: WSUS Fleet Orchestrator -->
+            <div class="sub-project-card">
+              <div class="sub-p-header">
+                <div class="sub-p-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </div>
+                <span class="sub-p-badge">99.2% Compliant</span>
+              </div>
+              <h4 class="sub-p-title">WSUS Fleet Security & Patch Orchestrator</h4>
+              <p class="sub-p-desc">
+                Structured monthly patch deployments for 200+ Windows 11 Enterprise laptops. Designed approval baselines, automated cleanup schedules, and verified BitLocker encryption keys to ensure strict security compliance.
+              </p>
+              <div class="sub-p-tags">
+                <span class="bp-tag">WSUS</span>
+                <span class="bp-tag">Windows 11</span>
+                <span class="bp-tag">BitLocker</span>
+              </div>
+            </div>
+
+            <!-- Project 04: AWS & Linux JBoss EAP -->
+            <div class="sub-project-card">
+              <div class="sub-p-header">
+                <div class="sub-p-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                </div>
+                <span class="sub-p-badge">Cloud Lab</span>
+              </div>
+              <h4 class="sub-p-title">AWS EC2 Linux & Middleware Lab</h4>
+              <p class="sub-p-desc">
+                Provisioned Amazon Linux EC2 environments within AWS VPC. Configured Java runtimes, systemd service units for JBoss EAP 7.4 and IBM WebSphere, application server port security, and automated log monitoring.
+              </p>
+              <div class="sub-p-tags">
+                <span class="bp-tag">AWS EC2</span>
+                <span class="bp-tag">Linux / Bash</span>
+                <span class="bp-tag">JBoss EAP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       INTERACTIVE OPERATIONS CONSOLE (LIVE IT TELEMETRY TERMINAL)
+       ========================================================================== -->
+    <section id="telemetry" class="terminal-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Interactive Ops Lab</span>
+          <h2 class="section-title">Live Systems & Operations Console</h2>
+          <p class="section-subtitle">Select any operational workflow below to inspect how I execute Active Directory provisioning, WSUS fleet patching, email migrations, and cloud infrastructure.</p>
+        </div>
+
+        <div class="terminal-console">
+          <div class="terminal-topbar">
+            <div class="terminal-dots">
+              <div class="dot red"></div>
+              <div class="dot yellow"></div>
+              <div class="dot green"></div>
+            </div>
+            <div class="terminal-title" id="terminalTitle">pravieen@mindteck-ops: ~/sysadmin/m365-provisioning.ps1</div>
+            <div style="font-family:var(--font-mono);font-size:0.75rem;color:#34d399;font-weight:700;">● CONNECTED</div>
+          </div>
+
+          <div class="terminal-nav" role="tablist">
+            <button class="term-tab-btn active" onclick="switchTermTab(0)">01. M365 & Entra ID</button>
+            <button class="term-tab-btn" onclick="switchTermTab(1)">02. WSUS Fleet Patching</button>
+            <button class="term-tab-btn" onclick="switchTermTab(2)">03. Zero-Loss Email Migration</button>
+            <button class="term-tab-btn" onclick="switchTermTab(3)">04. Network & VPN Triage</button>
+            <button class="term-tab-btn" onclick="switchTermTab(4)">05. Cloud & Linux EAP</button>
+          </div>
+
+          <div class="terminal-body">
+            <div class="term-left" id="termCodeArea">
+              <!-- Code block injected by JS -->
+            </div>
+
+            <div class="term-right" id="termDetailsArea">
+              <!-- Details docket injected by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       TECHNICAL SKILLS & ARCHITECTURE MATRIX
+       ========================================================================== */
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Core Arsenal</span>
+          <h2 class="section-title">Technical Expertise & Tooling Matrix</h2>
+          <p class="section-subtitle">Structured across daily enterprise administration, hands-on trial tenant laboratories, and emerging cloud/DevOps engineering.</p>
+        </div>
+
+        <div class="skills-3d-grid">
+          <!-- Category 1: Windows & Endpoint Management -->
+          <div class="skill-3d-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-3d">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <div>
+                <h3 class="skill-cat-title">System & Endpoint Administration</h3>
+                <span class="skill-cat-sub">Windows 11 Enterprise • Hardware • 200+ Nodes</span>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip">Windows 11 Enterprise <span class="chip-level">Daily</span></span>
+              <span class="skill-chip">Active Directory (Users/Groups) <span class="chip-level">Daily</span></span>
+              <span class="skill-chip">WSUS Patch Management <span class="chip-level">Daily</span></span>
+              <span class="skill-chip">OS Imaging & Deployment <span class="chip-level">Daily</span></span>
+              <span class="skill-chip">Hardware Diagnostics (RAM/SSD/Battery) <span class="chip-level">Daily</span></span>
+              <span class="skill-chip">Asset Tagging & Inventory Audits <span class="chip-level">Daily</span></span>
+              <span class="skill-chip">Microsoft Teams Rooms AV <span class="chip-level">Executive</span></span>
+            </div>
+          </div>
+
+          <!-- Category 2: Microsoft 365 & Identity (Entra / Intune) -->
+          <div class="skill-3d-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-3d">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              </div>
+              <div>
+                <h3 class="skill-cat-title">M365, Entra ID & Modern Identity</h3>
+                <span class="skill-cat-sub">Cloud Identity • Exchange Online • Intune</span>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip">M365 Admin Center <span class="chip-level">Daily</span></span>
+              <span class="skill-chip">Exchange Online & Mailbox Routing <span class="chip-level">Daily</span></span>
+              <span class="skill-chip">Microsoft Entra ID (MFA & SSPR) <span class="chip-level">Hands-on</span></span>
+              <span class="skill-chip">Conditional Access Policies <span class="chip-level">Hands-on</span></span>
+              <span class="skill-chip">Microsoft Intune (MDM & Compliance) <span class="chip-level">Hands-on</span></span>
+              <span class="skill-chip">BitLocker Encryption Policy <span class="chip-level">Hands-on</span></span>
+              <span class="skill-chip">Windows Autopilot Concepts <span class="chip-level">Studied</span></span>
+            </div>
+          </div>
+
+          <!-- Category 3: Networking & IT Operations -->
+          <div class="skill-3d-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-3d">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              </div>
+              <div>
+                <h3 class="skill-cat-title">Networking & Enterprise ITIL Operations</h3>
+                <span class="skill-cat-sub">Protocols • Remote Access • SLA Governance</span>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip">DNS & DHCP Configuration <span class="chip-level">Core</span></span>
+              <span class="skill-chip">TCP/IP Troubleshooting <span class="chip-level">Core</span></span>
+              <span class="skill-chip">VPN & Secure RDP Access <span class="chip-level">Daily</span></span>
+              <span class="skill-chip">Ivanti Ticketing System <span class="chip-level">Daily</span></span>
+              <span class="skill-chip">ITIL V3 Best Practices <span class="chip-level">Core</span></span>
+              <span class="skill-chip">SOP Authoring & Knowledge Base <span class="chip-level">Author</span></span>
+              <span class="skill-chip">24/7 On-Call Priority Rotation <span class="chip-level">Active</span></span>
+            </div>
+          </div>
+
+          <!-- Category 4: Cloud & DevOps Horizons -->
+          <div class="skill-3d-card">
+            <div class="skill-card-header">
+              <div class="skill-icon-3d">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+              </div>
+              <div>
+                <h3 class="skill-cat-title">Cloud Infrastructure & DevOps Toolkit</h3>
+                <span class="skill-cat-sub">AWS • Azure • Git Auto-Sync • Docker</span>
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip">AWS: EC2, S3, IAM, VPC, CloudWatch <span class="chip-level">Practiced</span></span>
+              <span class="skill-chip">Azure: VMs, VNets, NSGs, RBAC <span class="chip-level">Practiced</span></span>
+              <span class="skill-chip">Git / GitHub CI/CD Auto-Sync <span class="chip-level">Production</span></span>
+              <span class="skill-chip">DNS & Domain Architecture (karolgrove.com) <span class="chip-level">Production</span></span>
+              <span class="skill-chip">Linux Administration & Shell Scripting <span class="chip-level">Practiced</span></span>
+              <span class="skill-chip">Docker & Kubernetes Basics <span class="chip-level">Building</span></span>
+              <span class="skill-chip">JBoss EAP 7.4 & WebSphere <span class="chip-level">Practiced</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       CAREER TRAJECTORY & ENTERPRISE EXPERIENCE
+       ========================================================================== -->
+    <section id="experience" class="experience-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Professional Record</span>
+          <h2 class="section-title">Work Experience & Impact</h2>
+          <p class="section-subtitle">Real-world delivery supporting mission-critical enterprise systems and global user cohorts.</p>
+        </div>
+
+        <div class="exp-wrapper">
+          <!-- Role 1: Mindteck -->
+          <div class="exp-3d-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role-name">Associate System Administrator</h3>
+                <div class="exp-company-name">Mindteck India Limited • Bengaluru, India</div>
+              </div>
+              <div class="exp-duration">April 2025 — Present</div>
+            </div>
+
+            <p class="exp-summary-text">
+              Direct day-to-day IT infrastructure operations for a global enterprise environment of <strong>200+ users and 200+ endpoints</strong>. Maintain maximum uptime across identity, operating systems, hardware components, and client conferencing infrastructure.
+            </p>
+
+            <ul class="exp-responsibilities">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Active Directory & Identity Governance:</strong> Administer user accounts, dynamic/assigned security groups, and profile policies across 200+ global personnel.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Microsoft 365 & Remote Access:</strong> Manage Microsoft 365 licensing, Exchange Online mailbox provisioning, VPN client access, and seamless onboarding/offboarding workflows.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Windows 11 Enterprise & WSUS Patch Cycles:</strong> Enforce operating system security baselines, orchestrate monthly WSUS patch rollouts, and ensure endpoint compliance.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Endpoint Fleet & Hardware Diagnostics:</strong> Perform component-level troubleshooting (RAM, SSD, screen, battery, charging ports), OS imaging, asset tagging, warranty claims, and vendor reconciliations.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Executive Teams Rooms & On-Call Rotation:</strong> Support conference room AV, Microsoft Teams Rooms displays, author technical SOPs, and participate in after-hours on-call emergency rotations.</span>
+              </li>
+            </ul>
+
+            <!-- Award Callout Banner -->
+            <div class="trophy-banner">
+              <div class="trophy-icon-box">🏆</div>
+              <div>
+                <div class="trophy-title">Quarter Champ Award Recipient — Q1 2026</div>
+                <div class="trophy-desc">Awarded by Mindteck leadership for superior desktop support, outstanding infrastructure operations, and driving a company-wide email migration with zero data loss.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 2: Comfy Shoemakers -->
+          <div class="exp-3d-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role-name">IT Support Engineer</h3>
+                <div class="exp-company-name">Comfy Shoemakers • Erode, Tamil Nadu</div>
+              </div>
+              <div class="exp-duration">October 2018 — March 2019</div>
+            </div>
+
+            <p class="exp-summary-text">
+              Delivered front-line desktop, hardware, and network support across internal retail and office endpoints, diagnosing technical faults and maintaining uninterrupted workplace productivity.
+            </p>
+
+            <ul class="exp-responsibilities">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Hardware & Endpoint Diagnostics:</strong> Executed desktop/laptop hardware troubleshooting, OS installations, application configuration, and component replacements (RAM, storage, power peripherals).</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>LAN & Peripheral Connectivity:</strong> Configured local area network (LAN/Wi-Fi) settings, network printer sharing, point-of-sale peripherals, and workstation cabling.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Incident Resolution & User Support:</strong> Handled day-to-day user support requests, maintaining prompt turnaround times, routine system backups, and clear documentation.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       CERTIFICATIONS & LEARNING ROADMAP
+       ========================================================================== -->
+    <section id="certifications" class="cert-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Continuous Learning</span>
+          <h2 class="section-title">Certifications & Professional Development</h2>
+          <p class="section-subtitle">A committed trajectory advancing from enterprise endpoint administration to multi-cloud engineering.</p>
+        </div>
+
+        <div class="cert-grid">
+          <div class="cert-3d-box">
+            <span class="cert-status-pill done">COMPLETED</span>
+            <h3 class="cert-name">Claude 101</h3>
+            <p class="cert-issuer">Anthropic Certification — Advanced prompt engineering, autonomous workflows, and AI-assisted infrastructure operations.</p>
+          </div>
+
+          <div class="cert-3d-box">
+            <span class="cert-status-pill progress">IN PROGRESS • TARGET 2026</span>
+            <h3 class="cert-name">AWS Certified Cloud Practitioner</h3>
+            <p class="cert-issuer">Amazon Web Services — Cloud concepts, security, EC2 architecture, VPC networking, and cost optimization.</p>
+          </div>
+
+          <div class="cert-3d-box">
+            <span class="cert-status-pill planned">PLANNED TARGET</span>
+            <h3 class="cert-name">Microsoft MD-102 / MS-102</h3>
+            <p class="cert-issuer">Microsoft 365 Endpoint Administrator & Enterprise Administrator — Intune MDM, Entra ID, Defender, and Autopilot.</p>
+          </div>
+        </div>
+
+        <!-- Education Card -->
+        <div class="edu-banner">
+          <div class="edu-left">
+            <div class="edu-icon-badge">🎓</div>
+            <div>
+              <div style="font-size:0.75rem;font-family:var(--font-mono);color:var(--accent-dark);font-weight:700;">ACADEMIC QUALIFICATION</div>
+              <h3 class="edu-degree">Bachelor of Engineering (B.E.) in Electrical & Electronics Engineering</h3>
+              <p class="edu-college">KSR Institute for Engineering and Technology, Tamil Nadu • Graduated 2018</p>
+            </div>
+          </div>
+          <div>
+            <span class="hero-pill" style="padding:0.45rem 1rem;font-weight:700;">Hardware & Electrical Systems Core</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       RECRUITER CONTACT & CALL TO ACTION HUB
+       ========================================================================== -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-3d-console">
+          <span class="section-kicker">Direct Channel</span>
+          <h2 class="contact-title">Ready to Elevate Your IT & Cloud Operations?</h2>
+          <p class="contact-desc">
+            I am actively exploring roles in <strong>System Administration, Azure / Cloud Administration, Linux Administration, Cloud Support, or Junior DevOps</strong>. Let's discuss how my hands-on enterprise experience can support your team.
+          </p>
+
+          <div class="contact-actions">
+            <a href="mailto:mkpravieen97@gmail.com" class="contact-btn primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>mkpravieen97@gmail.com</span>
+            </a>
+
+            <a href="tel:+919500932816" class="contact-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+91 95009 32816</span>
+            </a>
+
+            <a href="https://wa.me/919500932816" target="_blank" rel="noopener noreferrer" class="contact-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              <span>WhatsApp Chat</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/mk-pravieen" target="_blank" rel="noopener noreferrer" class="contact-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <span>LinkedIn</span>
+            </a>
+
+            <button class="contact-btn" onclick="copyContactInfo()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copy Info</span>
+            </button>
+          </div>
+
+          <div style="font-size:0.88rem;color:var(--text-dim);font-family:var(--font-mono);font-weight:600;">
+            Bengaluru, Karnataka, India • Available for Immediate/Short Notice Opportunities
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      © <span id="currentYear"></span> <strong>M. K. Pravieen</strong> • High-Availability IT, Web Engineering & Cloud Infrastructure.
+    </div>
+  </footer>
+
+  <!-- Toast Notification Pill -->
+  <div class="toast-msg" id="toastMsg">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <span id="toastText">Copied to clipboard!</span>
+  </div>
+
+  <!-- Interactive 3D Canvas & Simulation Engine -->
+  <script>
+    // 1. Current Year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // 2. Mobile Drawer
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    if (mobileToggle && mobileDrawer) {
+      mobileToggle.addEventListener('click', () => mobileDrawer.classList.toggle('open'));
+      mobileDrawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileDrawer.classList.remove('open')));
+    }
+
+    // 3. One-Click Clipboard Copy with Toast
+    function copyContactInfo() {
+      const info = "M. K. Pravieen | System Administrator | mkpravieen97@gmail.com | +91 9500932816";
+      navigator.clipboard.writeText(info).then(() => {
+        showToast("Contact details copied to clipboard!");
+      }).catch(() => {
+        showToast("Email: mkpravieen97@gmail.com | +91 9500932816");
+      });
+    }
+
+    function showToast(text) {
+      const t = document.getElementById('toastMsg');
+      const s = document.getElementById('toastText');
+      if (t && s) {
+        s.textContent = text;
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 3200);
+      }
+    }
+
+    // 4. Interactive Operations Terminal Data & Engine
+    const termWorkflows = [
+      {
+        title: "pravieen@mindteck-ops: ~/sysadmin/m365-provisioning.ps1",
+        code: `
+<span class="code-prompt">PS C:\\Users\\Pravieen></span> <span class="code-cmd">Connect-MgGraph -Scopes "User.ReadWrite.All", "Directory.ReadWrite.All"</span>
+<span class="code-output">Authenticated as admin@mindteck.com (MFA Challenge Passed)</span>
+
+<span class="code-prompt">PS C:\\Users\\Pravieen></span> <span class="code-cmd">New-MgUser -DisplayName "Rohan Sharma" -UserPrincipalName "rohan.s@mindteck.com" -Department "Cloud Engineering"</span>
+<span class="code-output">[+] AD Account Created: CN=Rohan Sharma,OU=Bengaluru,DC=mindteck,DC=local
+[+] Assigned Licenses: Microsoft 365 E3 (Exchange, Teams, SharePoint)
+[+] Enforcing Intune Device Compliance Policy & BitLocker 256-bit Key Escrow</span>
+
+<span class="code-prompt">PS C:\\Users\\Pravieen></span> <span class="code-cmd">Get-MgUserRegistrationDetails -UserId "rohan.s@mindteck.com"</span>
+<span class="code-success">[SUCCESS] User Provisioned. SSPR Enabled. Conditional Access Policy Enforced.</span>
+        `,
+        rightTitle: "M365 & Identity Lifecycle",
+        rightDesc: "Automated onboarding protocol for 200+ global personnel. Unifies on-prem Active Directory sync, license assignment, MFA registration, and Intune enrollment.",
+        specs: [
+          { label: "Execution Time", val: "< 45 Seconds" },
+          { label: "Target Scope", val: "Global Entra ID & AD" },
+          { label: "Compliance Check", val: "BitLocker & MFA Active" },
+          { label: "Identity Sync", val: "Azure AD Connect" }
+        ]
+      },
+      {
+        title: "pravieen@mindteck-ops: ~/sysadmin/wsus-patch-orchestrator.sh",
+        code: `
+<span class="code-prompt">root@mindteck-wsus:~#</span> <span class="code-cmd">Get-WsusServer | Invoke-WsusServerCleanup -DeclineExpiredUpdates</span>
+<span class="code-output">[INFO] Scanning 200+ Endpoints for Windows 11 Enterprise cumulative updates...
+[INFO] Approved Updates: KB5034441, KB5034123 (Critical Security Baselines)</span>
+
+<span class="code-prompt">root@mindteck-wsus:~#</span> <span class="code-cmd">Get-WsusComputer -ComputerTargetGroups "Workstations-BLR" | Measure-Object</span>
+<span class="code-output">Total Target Endpoints: 204
+Patched & Compliant: 198 (97.1%)
+Pending Reboot: 6 (Scheduled 22:00 IST)</span>
+
+<span class="code-prompt">root@mindteck-wsus:~#</span> <span class="code-cmd">./enforce-reboot-window.sh --grace-period 15m</span>
+<span class="code-success">[SUCCESS] WSUS Patch Cycle Completed. Zero Zero-Day Vulnerability Exposure.</span>
+        `,
+        rightTitle: "WSUS Fleet Patch Governance",
+        rightDesc: "Structured monthly patch deployment for 200+ Windows 11 Enterprise laptops. Ensures high compliance with zero disruption to daily engineering operations.",
+        specs: [
+          { label: "Fleet Coverage", val: "200+ Endpoints" },
+          { label: "Patch Success Rate", val: "99.2%" },
+          { label: "Maintenance Window", val: "After-Hours Auto" },
+          { label: "WSUS Audit Status", val: "100% Passed" }
+        ]
+      },
+      {
+        title: "pravieen@mindteck-ops: ~/sysadmin/zero-loss-migration.ps1",
+        code: `
+<span class="code-prompt">PS C:\\Migration></span> <span class="code-cmd">Start-MigrationBatch -Name "Mindteck_Batch_01" -CSVFile .\\mailboxes_200.csv</span>
+<span class="code-output">[INFO] Validating 200+ Exchange Online Mailbox endpoints...
+[INFO] Syncing mailboxes, calendar permissions, and shared resources...</span>
+
+<span class="code-prompt">PS C:\\Migration></span> <span class="code-cmd">Get-MigrationUser -BatchId "Mindteck_Batch_01" | Select Status, DataMigrated</span>
+<span class="code-output">Migrated: 204 / 204 Mailboxes
+Data Transferred: 1.84 TB
+Errors Detected: 0</span>
+
+<span class="code-prompt">PS C:\\Migration></span> <span class="code-cmd">Complete-MigrationBatch -Name "Mindteck_Batch_01"</span>
+<span class="code-success">[MILESTONE] 200+ Active Directory accounts migrated on schedule with ZERO DATA LOSS!</span>
+        `,
+        rightTitle: "Zero-Loss Email Migration",
+        rightDesc: "Signature Achievement: Migrated 200+ Active Directory accounts and mailboxes to modern infrastructure without dropping a single email or calendar meeting.",
+        specs: [
+          { label: "Mailboxes Migrated", val: "204 Accounts" },
+          { label: "Data Integrity", val: "100% (Zero Loss)" },
+          { label: "Downtime Impact", val: "0 Minutes" },
+          { label: "Award Recognition", val: "Quarter Champ Q1 '26" }
+        ]
+      },
+      {
+        title: "pravieen@mindteck-ops: ~/sysadmin/network-triage.sh",
+        code: `
+<span class="code-prompt">pravieen@net-diag:~$</span> <span class="code-cmd">Resolve-DnsName internal-portal.mindteck.local -Server 10.0.1.10</span>
+<span class="code-output">Name: internal-portal.mindteck.local
+IPAddress: 10.0.4.88 (TTL: 300)</span>
+
+<span class="code-prompt">pravieen@net-diag:~$</span> <span class="code-cmd">Test-NetConnection -ComputerName 10.0.4.88 -Port 443</span>
+<span class="code-output">TcpTestSucceeded : True
+PingRTT: 4ms (Local Gigabit Subnet)</span>
+
+<span class="code-prompt">pravieen@net-diag:~$</span> <span class="code-cmd">ivanti-cli --ticket 84920 --update "DNS record restored, VPN route flushed"</span>
+<span class="code-success">[RESOLVED] Mean Response Time: 7.3 Minutes. User restored to full productivity.</span>
+        `,
+        rightTitle: "Network & VPN Rapid Triage",
+        rightDesc: "Diagnosing DNS, DHCP, TCP/IP, and remote VPN routing bottlenecks. Maintained a reported Mean Response Time (MRT) of 7.3 minutes.",
+        specs: [
+          { label: "Reported MRT", val: "7.3 Minutes" },
+          { label: "SLA Adherence", val: "99.8%" },
+          { label: "Ticketing Tool", val: "Ivanti ServiceDesk" },
+          { label: "Protocols", val: "DNS, DHCP, TCP/IP, VPN" }
+        ]
+      },
+      {
+        title: "pravieen@mindteck-ops: ~/devops/cloud-eap-deploy.sh",
+        code: `
+<span class="code-prompt">ec2-user@ip-10-0-2-15:~$</span> <span class="code-cmd">aws ec2 describe-instances --filters "Name=tag:Role,Values=JBoss-EAP"</span>
+<span class="code-output">[INFO] Instance i-08f3a92b11 (Amazon Linux 2023) State: running</span>
+
+<span class="code-prompt">ec2-user@ip-10-0-2-15:~$</span> <span class="code-cmd">sudo systemctl status jboss-eap-rhel.service</span>
+<span class="code-output">● jboss-eap-rhel.service - JBoss EAP 7.4 Application Server
+   Loaded: loaded (/usr/lib/systemd/system/jboss-eap-rhel.service; enabled)
+   Active: active (running) since Wed 2026-11-25 09:14:02 UTC</span>
+
+<span class="code-prompt">ec2-user@ip-10-0-2-15:~$</span> <span class="code-cmd">docker ps --filter "name=k8s-agent"</span>
+<span class="code-success">[CONTAINER HEALTHY] Java runtime configured, JBoss EAP 7.4 active, AWS VPC live.</span>
+        `,
+        rightTitle: "Cloud & Linux Middleware Practice",
+        rightDesc: "Hands-on lab administration: deploying Amazon Linux EC2 instances, configuring Java runtime environments, and tuning JBoss EAP 7.4 and IBM WebSphere application servers.",
+        specs: [
+          { label: "Cloud Platforms", val: "AWS EC2 & Azure VMs" },
+          { label: "Middleware", val: "JBoss EAP 7.4 & WebSphere" },
+          { label: "DevOps Arsenal", val: "Docker, K8s, Terraform" },
+          { label: "OS Environment", val: "Amazon Linux & RHEL" }
+        ]
+      }
+    ];
+
+    function switchTermTab(idx) {
+      document.querySelectorAll('.term-tab-btn').forEach((b, i) => {
+        b.classList.toggle('active', i === idx);
+      });
+
+      const data = termWorkflows[idx];
+      document.getElementById('terminalTitle').textContent = data.title;
+      document.getElementById('termCodeArea').innerHTML = data.code;
+
+      const rightArea = document.getElementById('termDetailsArea');
+      rightArea.innerHTML = `
+        <h4 class="term-right-title">${data.rightTitle}</h4>
+        <p class="term-right-desc">${data.rightDesc}</p>
+        <div class="term-specs">
+          ${data.specs.map(s => `
+            <div class="term-spec-row">
+              <span class="term-spec-label">${s.label}</span>
+              <span class="term-spec-val">${s.val}</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // Initialize first terminal workflow
+    switchTermTab(0);
+
+    // ==========================================================================
+    // 5. INTERACTIVE 3D ARCHITECTURE ENGINE (DUAL-MODE: IT & M365 / DEVOPS)
+    // ==========================================================================
+    let currentArchMode = 'it';
+    let switchArchMode = null; // Exposed globally
+
+    (function init3DArchitectureEngine() {
+      const canvas = document.getElementById('infraCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const box = document.getElementById('canvasBox');
+
+      const inspectorBadge = document.getElementById('inspectorBadge');
+      const inspectorText = document.getElementById('inspectorText');
+      const hudStatsGroup = document.getElementById('hudStatsGroup');
+      const triggerActionBtn = document.getElementById('triggerActionBtn');
+
+      let width = 0, height = 0;
+      let dpr = window.devicePixelRatio || 1;
+
+      // 3D camera angles
+      let angleX = 0.48;
+      let angleY = -0.42;
+      let targetAngleX = 0.48;
+      let targetAngleY = -0.42;
+
+      let isDragging = false;
+      let lastMouseX = 0;
+      let lastMouseY = 0;
+      let hoveredNode = null;
+      let waveOrigin = null;
+      let waveTime = 0;
+
+      // ------------------------------------------------------------------------
+      // ARCHITECTURE DATA SETS
+      // ------------------------------------------------------------------------
+      const archData = {
+        it: {
+          key: "it",
+          title: "3D Enterprise IT & Microsoft 365 Architecture",
+          hudStats: [
+            { label: "M365 TENANT", val: "200+ E3 ACTIVE" },
+            { label: "ENTRA ID", val: "HYBRID SYNCED" },
+            { label: "FLEET", val: "200+ WIN 11" },
+            { label: "WSUS", val: "99.2% COMPLIANT" }
+          ],
+          actionBtn: "Simulate M365 Sync",
+          actionToast: "Dispatched automated M365 Tenant & Entra ID Sync across 200+ Endpoints!",
+          defaultInspector: {
+            badge: "M365 CLOUD",
+            color: "#0284c7",
+            text: "Hover or click any 3D node to inspect M365 Admin, Entra ID, WSUS & Fleet architecture"
+          },
+          nodes: [
+            {
+              id: "m365",
+              name: "M365 Cloud Admin",
+              sub: "Tenant • Exchange • Teams",
+              x: 0, y: -78, z: -35,
+              color: "#0284c7", glow: "rgba(2, 132, 199, 0.5)",
+              badge: "M365 HUB",
+              icon: "☁️",
+              spec: "M365 Admin Center: 200+ Enterprise E3 licenses, Exchange Online mailbox governance, Teams Rooms, 0 data loss."
+            },
+            {
+              id: "entra",
+              name: "Microsoft Entra ID",
+              sub: "Hybrid AD • MFA • SSPR",
+              x: -125, y: -18, z: -15,
+              color: "#4f46e5", glow: "rgba(79, 70, 229, 0.5)",
+              badge: "IDENTITY",
+              icon: "🔐",
+              spec: "Entra ID & Active Directory: Hybrid user sync, MFA enforcement, SSPR, Conditional Access policies & dynamic groups."
+            },
+            {
+              id: "wsus",
+              name: "Intune MDM & WSUS",
+              sub: "Patch Rings • BitLocker",
+              x: 125, y: -18, z: -15,
+              color: "#d97706", glow: "rgba(217, 119, 6, 0.5)",
+              badge: "SECURITY",
+              icon: "🛡️",
+              spec: "Intune & WSUS Server: Monthly Windows 11 KB patch baselines, BitLocker 256-bit key escrow & 99.2% endpoint compliance."
+            },
+            {
+              id: "fleet",
+              name: "200+ Enterprise Fleet",
+              sub: "Windows 11 Laptops",
+              x: 0, y: 55, z: 0,
+              color: "#059669", glow: "rgba(5, 150, 105, 0.5)",
+              badge: "FLEET 200+",
+              icon: "💻",
+              spec: "Global Workforce Fleet: Windows 11 Enterprise laptops, component diagnostics (RAM/SSD), standard software imaging & secure domain joins."
+            },
+            {
+              id: "ivanti",
+              name: "Ivanti ServiceDesk",
+              sub: "7.3m MRT • ITIL V3",
+              x: -105, y: 110, z: 20,
+              color: "#9333ea", glow: "rgba(147, 51, 234, 0.5)",
+              badge: "SUPPORT",
+              icon: "⚡",
+              spec: "Ivanti ServiceDesk: Rapid incident triage, 7.3-minute Mean Response Time (MRT), technical SOP authoring & on-call escalation."
+            },
+            {
+              id: "network",
+              name: "Network & Secure VPN",
+              sub: "DNS • DHCP • TCP/IP",
+              x: 105, y: 110, z: 20,
+              color: "#0891b2", glow: "rgba(8, 145, 178, 0.5)",
+              badge: "GATEWAY",
+              icon: "🌐",
+              spec: "Core Networking: DNS zones, DHCP scopes, Gigabit subnets, client VPN tunneling & secure RDP connectivity."
+            }
+          ],
+          links: [
+            { from: "m365", to: "entra", label: "Azure AD Connect" },
+            { from: "m365", to: "wsus", label: "Cloud Mgmt Gateway" },
+            { from: "entra", to: "fleet", label: "Kerberos & SSO" },
+            { from: "wsus", to: "fleet", label: "KB Security Rings" },
+            { from: "network", to: "fleet", label: "Secure VPN Route" },
+            { from: "ivanti", to: "fleet", label: "7.3m MRT SLA" }
+          ]
+        },
+
+        devops: {
+          key: "devops",
+          title: "3D Modern DevOps & Cloud Architecture",
+          hudStats: [
+            { label: "REPO", val: "GIT AUTO-SYNC" },
+            { label: "PIPELINE", val: "CI/CD PASSING" },
+            { label: "K8S PODS", val: "100% HEALTHY" },
+            { label: "PROD EDGE", val: "karolgrove.com LIVE" }
+          ],
+          actionBtn: "Trigger CI/CD Auto-Sync",
+          actionToast: "Git Commit Received! Automated CI/CD Pipeline Deployed to karolgrove.com Edge!",
+          defaultInspector: {
+            badge: "DEVOPS PIPELINE",
+            color: "#ea580c",
+            text: "Hover or click any node to trace Git Auto-Sync, CI/CD, Docker, K8s, AWS & karolgrove.com"
+          },
+          nodes: [
+            {
+              id: "git",
+              name: "Git / GitHub Repo",
+              sub: "Auto-Sync CI Webhook",
+              x: -140, y: -65, z: -25,
+              color: "#ea580c", glow: "rgba(234, 88, 12, 0.5)",
+              badge: "GIT SOURCE",
+              icon: "🐙",
+              spec: "Git Repository: Automated push webhooks, branch management, instant CI auto-sync (karolgrove.com release cycle)."
+            },
+            {
+              id: "cicd",
+              name: "CI/CD Build & Test",
+              sub: "Automated Workflows",
+              x: -50, y: -85, z: -35,
+              color: "#2563eb", glow: "rgba(37, 99, 235, 0.5)",
+              badge: "CI/CD ENGINE",
+              icon: "⚙️",
+              spec: "CI/CD Pipeline: Automated unit testing, code linting, security scans, static build compilation & artifact packaging."
+            },
+            {
+              id: "docker",
+              name: "Docker Containers",
+              sub: "Immutable Microservices",
+              x: 50, y: -85, z: -35,
+              color: "#0284c7", glow: "rgba(2, 132, 199, 0.5)",
+              badge: "CONTAINER",
+              icon: "🐳",
+              spec: "Docker Containers: Multi-stage lightweight Dockerfiles, containerized runtime dependencies, registry tagging."
+            },
+            {
+              id: "k8s",
+              name: "Kubernetes Cluster",
+              sub: "Pods & ReplicaSets",
+              x: 140, y: -65, z: -25,
+              color: "#4f46e5", glow: "rgba(79, 70, 229, 0.5)",
+              badge: "K8S ORCH",
+              icon: "☸️",
+              spec: "Kubernetes Cluster: Declarative deployment manifests, pod self-healing, rolling updates, ingress routing & service mesh."
+            },
+            {
+              id: "cloud",
+              name: "AWS & Azure VPC",
+              sub: "EC2 • JBoss EAP 7.4",
+              x: -75, y: 40, z: 0,
+              color: "#d97706", glow: "rgba(217, 119, 6, 0.5)",
+              badge: "CLOUD VPC",
+              icon: "☁️",
+              spec: "Cloud Infrastructure: Amazon Linux 2023 EC2, Azure VMs, VPC subnets, IAM RBAC & JBoss EAP 7.4 middleware."
+            },
+            {
+              id: "edge",
+              name: "Edge CDN & Domain",
+              sub: "karolgrove.com (Live)",
+              x: 75, y: 40, z: 0,
+              color: "#059669", glow: "rgba(5, 150, 105, 0.5)",
+              badge: "PROD EDGE",
+              icon: "🌐",
+              spec: "Production karolgrove.com: $0 Initial Launch Model, Cloudflare CDN distribution, Apex A-record, automated SSL/TLS."
+            },
+            {
+              id: "telemetry",
+              name: "Observability & Logs",
+              sub: "CloudWatch • systemd",
+              x: 0, y: 110, z: 25,
+              color: "#7c3aed", glow: "rgba(124, 58, 237, 0.5)",
+              badge: "METRICS",
+              icon: "📊",
+              spec: "Continuous Telemetry: AWS CloudWatch alarms, systemd service daemon health, MRT response tracking & latency monitoring."
+            }
+          ],
+          links: [
+            { from: "git", to: "cicd", label: "Push Webhook" },
+            { from: "cicd", to: "docker", label: "Containerize" },
+            { from: "docker", to: "k8s", label: "Deploy Pods" },
+            { from: "k8s", to: "cloud", label: "VPC Ingress" },
+            { from: "cloud", to: "edge", label: "Edge Routing" },
+            { from: "edge", to: "telemetry", label: "Edge Hits" },
+            { from: "cloud", to: "telemetry", label: "System Logs" }
+          ]
+        }
+      };
+
+      // ------------------------------------------------------------------------
+      // UI CONTROLS & HUD SWITCHING
+      // ------------------------------------------------------------------------
+      function updateHUD(mode) {
+        const data = archData[mode];
+        if (!data) return;
+
+        // Update stats
+        if (hudStatsGroup) {
+          hudStatsGroup.innerHTML = data.hudStats.map(s => `
+            <div class="hud-stat">${s.label}: <strong>${s.val}</strong></div>
+          `).join('');
+        }
+
+        // Update button
+        if (triggerActionBtn) {
+          triggerActionBtn.textContent = data.actionBtn;
+        }
+
+        // Reset inspector
+        resetInspector();
+      }
+
+      function resetInspector() {
+        const def = archData[currentArchMode].defaultInspector;
+        if (inspectorBadge && inspectorText) {
+          inspectorBadge.textContent = def.badge;
+          inspectorBadge.style.background = def.color;
+          inspectorText.textContent = def.text;
+        }
+      }
+
+      function setInspector(node) {
+        if (!node) {
+          resetInspector();
+          return;
+        }
+        if (inspectorBadge && inspectorText) {
+          inspectorBadge.textContent = node.badge;
+          inspectorBadge.style.background = node.color;
+          inspectorText.textContent = `${node.name} — ${node.spec}`;
+        }
+      }
+
+      // Exposed Mode Switcher Function
+      switchArchMode = function(mode) {
+        if (mode === currentArchMode) return;
+        currentArchMode = mode;
+
+        document.getElementById('tabItInfra')?.classList.toggle('active', mode === 'it');
+        document.getElementById('tabDevOps')?.classList.toggle('active', mode === 'devops');
+        document.getElementById('tabItInfra')?.setAttribute('aria-selected', mode === 'it');
+        document.getElementById('tabDevOps')?.setAttribute('aria-selected', mode === 'devops');
+
+        updateHUD(mode);
+
+        // Reset camera angles smoothly
+        targetAngleX = 0.48;
+        targetAngleY = mode === 'it' ? -0.42 : -0.35;
+        hoveredNode = null;
+
+        // Trigger welcome pulse wave
+        waveTime = performance.now();
+        waveOrigin = { x: 0, y: 0 };
+      };
+
+      // Action button click handler
+      if (triggerActionBtn) {
+        triggerActionBtn.addEventListener('click', () => {
+          waveTime = performance.now();
+          waveOrigin = { x: 0, y: -50 };
+          const toast = archData[currentArchMode].actionToast;
+          showToast(toast);
+        });
+      }
+
+      // Initial HUD setup
+      updateHUD('it');
+
+      // ------------------------------------------------------------------------
+      // RESIZE & CANVAS EVENTS
+      // ------------------------------------------------------------------------
+      function resize() {
+        width = box.clientWidth;
+        height = box.clientHeight;
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        ctx.scale(dpr, dpr);
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      box.addEventListener('mousedown', e => {
+        isDragging = true;
+        lastMouseX = e.clientX;
+        lastMouseY = e.clientY;
+      });
+
+      window.addEventListener('mousemove', e => {
+        const rect = box.getBoundingClientRect();
+        const mx = e.clientX - rect.left;
+        const my = e.clientY - rect.top;
+
+        if (isDragging) {
+          const dx = e.clientX - lastMouseX;
+          const dy = e.clientY - lastMouseY;
+          targetAngleY += dx * 0.007;
+          targetAngleX += dy * 0.007;
+          targetAngleX = Math.max(0.2, Math.min(1.1, targetAngleX));
+          lastMouseX = e.clientX;
+          lastMouseY = e.clientY;
+          return;
+        }
+
+        // Subtler parallax when hovering
+        if (mx >= 0 && mx <= width && my >= 0 && my <= height) {
+          const normX = (mx / width) - 0.5;
+          const normY = (my / height) - 0.5;
+          targetAngleY = (currentArchMode === 'it' ? -0.42 : -0.35) + normX * 0.35;
+          targetAngleX = 0.48 + normY * 0.22;
+        }
+      });
+
+      window.addEventListener('mouseup', () => { isDragging = false; });
+
+      // Click to select node & send wave
+      box.addEventListener('click', e => {
+        if (hoveredNode) {
+          waveTime = performance.now();
+          waveOrigin = { x: hoveredNode.x, y: hoveredNode.y };
+          showToast(`${hoveredNode.name}: ${hoveredNode.sub}`);
+        }
+      });
+
+      // ------------------------------------------------------------------------
+      // 3D PROJECTION & RENDERING HELPERS
+      // ------------------------------------------------------------------------
+      function project3D(x, y, z) {
+        const cosY = Math.cos(angleY), sinY = Math.sin(angleY);
+        const x1 = x * cosY + y * sinY;
+        const y1 = -x * sinY + y * cosY;
+
+        const cosX = Math.cos(angleX), sinX = Math.sin(angleX);
+        const y2 = y1 * cosX - z * sinX;
+        const z2 = y1 * sinX + z * cosX;
+
+        const cameraDist = 480;
+        const scale = cameraDist / (cameraDist + z2);
+        const projX = width / 2 + x1 * scale;
+        const projY = height / 2 + y2 * scale + 15;
+
+        return { x: projX, y: projY, scale: scale, depth: z2 };
+      }
+
+      function drawRoundRect(c, x, y, w, h, r) {
+        if (c.roundRect) {
+          c.roundRect(x, y, w, h, r);
+        } else {
+          c.rect(x, y, w, h);
+        }
+      }
+
+      // ------------------------------------------------------------------------
+      // MAIN ANIMATION LOOP
+      // ------------------------------------------------------------------------
+      function render(now) {
+        // Physics lerp for rotation
+        angleX += (targetAngleX - angleX) * 0.08;
+        angleY += (targetAngleY - angleY) * 0.08;
+
+        ctx.clearRect(0, 0, width, height);
+
+        // 1. Draw Subtle Isometric Base Grid Floor
+        const gridCols = 8;
+        const gridRows = 8;
+        const gridSpacing = 38;
+        ctx.strokeStyle = 'rgba(2, 132, 199, 0.09)';
+        ctx.lineWidth = 1;
+
+        for (let c = 0; c <= gridCols; c++) {
+          const p1 = project3D((c - gridCols / 2) * gridSpacing, (-gridRows / 2) * gridSpacing, 40);
+          const p2 = project3D((c - gridCols / 2) * gridSpacing, (gridRows / 2) * gridSpacing, 40);
+          ctx.beginPath();
+          ctx.moveTo(p1.x, p1.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.stroke();
+        }
+        for (let r = 0; r <= gridRows; r++) {
+          const p1 = project3D((-gridCols / 2) * gridSpacing, (r - gridRows / 2) * gridSpacing, 40);
+          const p2 = project3D((gridCols / 2) * gridSpacing, (r - gridRows / 2) * gridSpacing, 40);
+          ctx.beginPath();
+          ctx.moveTo(p1.x, p1.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.stroke();
+        }
+
+        // 2. Active Model Nodes & Links
+        const activeArch = archData[currentArchMode];
+        const rawNodes = activeArch.nodes;
+        const rawLinks = activeArch.links;
+
+        // Calculate wave effect
+        const waveElapsed = waveTime ? (now - waveTime) * 0.22 : 0;
+
+        // Project nodes to 2D screen coordinates
+        const projectedNodes = rawNodes.map((node, idx) => {
+          let currZ = node.z;
+          // Float breathing
+          currZ += Math.sin(now * 0.0025 + idx * 0.8) * 3;
+
+          // Wave displacement
+          if (waveElapsed > 0 && waveOrigin) {
+            const dist = Math.hypot(node.x - waveOrigin.x, node.y - waveOrigin.y);
+            if (Math.abs(dist - waveElapsed) < 45) {
+              currZ -= Math.sin((dist - waveElapsed) * 0.08) * 18;
+            }
+          }
+
+          const proj = project3D(node.x, node.y, currZ);
+          return {
+            ...node,
+            px: proj.x,
+            py: proj.y,
+            scale: proj.scale,
+            depth: proj.depth
+          };
+        });
+
+        // Quick node lookup by ID
+        const nodeMap = {};
+        projectedNodes.forEach(n => { nodeMap[n.id] = n; });
+
+        // Hit-test under mouse
+        const rect = box.getBoundingClientRect();
+        // Since we scale canvas by dpr, mouse relative coords match width & height
+        let bestDist = 48;
+        let newHovered = null;
+
+        // Only test if mouse inside box
+        window.__mousePos = window.__mousePos || { x: -999, y: -999 };
+        const mx = window.__mousePos.x - rect.left;
+        const my = window.__mousePos.y - rect.top;
+
+        if (mx >= 0 && mx <= width && my >= 0 && my <= height && !isDragging) {
+          projectedNodes.forEach(n => {
+            const d = Math.hypot(n.px - mx, n.py - my);
+            if (d < bestDist) {
+              bestDist = d;
+              newHovered = n;
+            }
+          });
+        }
+
+        if (newHovered !== hoveredNode) {
+          hoveredNode = newHovered;
+          box.style.cursor = hoveredNode ? 'pointer' : 'grab';
+          setInspector(hoveredNode);
+        }
+
+        // 3. Draw Connection Links & Animated Photons
+        rawLinks.forEach((link, lIdx) => {
+          const nA = nodeMap[link.from];
+          const nB = nodeMap[link.to];
+          if (!nA || !nB) return;
+
+          const isConnectedToHover = hoveredNode && (hoveredNode.id === nA.id || hoveredNode.id === nB.id);
+
+          // Connecting pathway
+          ctx.beginPath();
+          ctx.moveTo(nA.px, nA.py);
+          ctx.lineTo(nB.px, nB.py);
+          ctx.strokeStyle = isConnectedToHover ? nA.color : 'rgba(2, 132, 199, 0.22)';
+          ctx.lineWidth = isConnectedToHover ? 2.2 : 1.3;
+          ctx.setLineDash([4, 4]);
+          ctx.stroke();
+          ctx.setLineDash([]);
+
+          // Traveling data photons
+          const photonSpeed = 0.0006;
+          for (let k = 0; k < 2; k++) {
+            const t = ((now * photonSpeed + k * 0.5 + lIdx * 0.18) % 1);
+            const pkX = nA.px + (nB.px - nA.px) * t;
+            const pkY = nA.py + (nB.py - nA.py) * t;
+
+            ctx.beginPath();
+            ctx.arc(pkX, pkY, 3.2 * nA.scale, 0, Math.PI * 2);
+            ctx.fillStyle = nA.color;
+            ctx.shadowColor = nA.color;
+            ctx.shadowBlur = 8;
+            ctx.fill();
+            ctx.shadowBlur = 0;
+          }
+        });
+
+        // 4. Sort Nodes by Depth (Painter's algorithm)
+        const sortedNodes = [...projectedNodes].sort((a, b) => b.depth - a.depth);
+
+        // 5. Draw 3D Isometric Node Pedestals & Cards
+        sortedNodes.forEach(node => {
+          const isHovered = hoveredNode && hoveredNode.id === node.id;
+          const s = node.scale * (isHovered ? 1.06 : 1.0);
+
+          const cardW = Math.max(90, 132 * s);
+          const cardH = Math.max(34, 42 * s);
+          const cardD = Math.max(6, 9 * s);
+
+          const px = node.px;
+          const py = node.py;
+
+          // A. Ambient soft drop shadow
+          ctx.beginPath();
+          ctx.ellipse(px, py + cardH / 2 + cardD + 4, cardW * 0.52, 6 * s, 0, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(15, 23, 42, 0.08)';
+          ctx.fill();
+
+          // B. 3D Side/Extrusion Face
+          ctx.beginPath();
+          drawRoundRect(ctx, px - cardW / 2, py - cardH / 2 + cardD, cardW, cardH, 8 * s);
+          ctx.fillStyle = 'rgba(15, 23, 42, 0.16)';
+          ctx.fill();
+
+          // C. 3D Top Card Surface
+          ctx.beginPath();
+          drawRoundRect(ctx, px - cardW / 2, py - cardH / 2, cardW, cardH, 8 * s);
+          ctx.fillStyle = isHovered ? '#ffffff' : 'rgba(255, 255, 255, 0.96)';
+          ctx.fill();
+
+          // Border & Glow
+          if (isHovered) {
+            ctx.strokeStyle = node.color;
+            ctx.lineWidth = 2.4;
+            ctx.shadowColor = node.glow;
+            ctx.shadowBlur = 18 * s;
+            ctx.stroke();
+            ctx.shadowBlur = 0;
+          } else {
+            ctx.strokeStyle = 'rgba(203, 213, 225, 0.85)';
+            ctx.lineWidth = 1.4;
+            ctx.stroke();
+          }
+
+          // D. Icon Pill (Left)
+          const iconPillX = px - cardW / 2 + 18 * s;
+          const iconPillY = py;
+          ctx.font = `${Math.round(15 * s)}px system-ui, -apple-system, sans-serif`;
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillText(node.icon, iconPillX, iconPillY);
+
+          // E. Text Labels (Right of Icon)
+          const textStartX = px - cardW / 2 + 35 * s;
+
+          // Title
+          ctx.font = `700 ${Math.max(9, Math.round(11 * s))}px 'Space Grotesk', system-ui, sans-serif`;
+          ctx.fillStyle = '#0f172a';
+          ctx.textAlign = 'left';
+          ctx.textBaseline = 'alphabetic';
+          ctx.fillText(node.name, textStartX, py - 2 * s);
+
+          // Subtitle / Architecture Role
+          ctx.font = `600 ${Math.max(7.5, Math.round(8.5 * s))}px 'JetBrains Mono', monospace`;
+          ctx.fillStyle = isHovered ? node.color : '#475569';
+          ctx.fillText(node.sub, textStartX, py + 10 * s);
+
+          // Mini status pulse dot on top right
+          const dotX = px + cardW / 2 - 10 * s;
+          const dotY = py - cardH / 2 + 10 * s;
+          ctx.beginPath();
+          ctx.arc(dotX, dotY, 3 * s, 0, Math.PI * 2);
+          ctx.fillStyle = node.color;
+          ctx.fill();
+        });
+
+        requestAnimationFrame(render);
+      }
+
+      window.addEventListener('mousemove', e => {
+        window.__mousePos = { x: e.clientX, y: e.clientY };
+      });
+
+      requestAnimationFrame(render);
+    })();
+
+    // 6. Scroll Spy for Single-Line Navbar Active State
+    const sections = document.querySelectorAll('section[id]');
+    const navAnchors = document.querySelectorAll('.nav-links a');
+
+    window.addEventListener('scroll', () => {
+      let currentSectionId = '';
+      const scrollY = window.pageYOffset;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          currentSectionId = section.getAttribute('id');
+        }
+      });
+
+      navAnchors.forEach(anchor => {
+        anchor.classList.remove('active');
+        if (anchor.getAttribute('href') === `#${currentSectionId}`) {
+          anchor.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
